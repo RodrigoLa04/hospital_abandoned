@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dawg4b841j7u8"]
+
+[ext_resource type="PackedScene" uid="uid://dj4w0n26r0mcg" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/WaitingChair/SM_WaitingChair.fbx" id="1_0w3wa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0w3wa"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Silla" type="StaticBody3D"]
+
+[node name="SM_WaitingChair" parent="." instance=ExtResource("1_0w3wa")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0w3wa")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxacq6t6q7f23"]
+
+[ext_resource type="PackedScene" uid="uid://b1nyac02nhrv3" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception wall/SM_Reception_Wall_1.fbx" id="1_mwvcy"]
+[ext_resource type="Texture2D" uid="uid://b3tw3xdt4fwfx" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception wall/M_Reception_Wall.png" id="2_r6xbm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b1vcx"]
+albedo_texture = ExtResource("2_r6xbm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6p070"]
+points = PackedVector3Array(-0.0441621, -1.5, -1.96958, 0.0441621, -1.5, -1.96958, -0.0441621, -1.5, 1.96919, -0.0441621, 1.5, -1.96958, 0.0441621, 1.5, -1.96958, 0.0441535, -1.5, 1.96958, -0.0441621, 1.5, 1.96958, 0.0441535, 1.5, 1.96958)
+
+[node name="wall_recepcion" type="StaticBody3D"]
+
+[node name="SM_Reception_Wall_1" parent="." instance=ExtResource("1_mwvcy")]
+
+[node name="SM_Reception_Wall_1" parent="SM_Reception_Wall_1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_b1vcx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_6p070")
+
+[editable path="SM_Reception_Wall_1"]

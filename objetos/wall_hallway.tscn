@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuug13kprxvxv"]
+
+[ext_resource type="PackedScene" uid="uid://cb40pknbyu5hd" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Walls/SM_Hallway_Wall_1.fbx" id="1_2nple"]
+[ext_resource type="Texture2D" uid="uid://ccxhal01oxv5b" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Walls/M_Hallway_Wall_Green.png" id="2_1n2po"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmgsw"]
+albedo_texture = ExtResource("2_1n2po")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0addi"]
+points = PackedVector3Array(-0.0441637, -1.25, -1.92775, 0.0441551, -1.25, -1.92775, -0.0441637, -1.25, 1.92737, -0.0441637, 1.24976, -1.92775, 0.0441551, 1.24976, -1.92775, 0.0441637, -1.25, 1.92737, -0.0441637, 1.24976, 1.92737, 0.0441637, 1.24976, 1.92737)
+
+[node name="wall_hallway" type="StaticBody3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="SM_Hallway_Wall_1" parent="." instance=ExtResource("1_2nple")]
+
+[node name="SM_Hallway_Wall_1" parent="SM_Hallway_Wall_1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xmgsw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_0addi")
+
+[editable path="SM_Hallway_Wall_1"]

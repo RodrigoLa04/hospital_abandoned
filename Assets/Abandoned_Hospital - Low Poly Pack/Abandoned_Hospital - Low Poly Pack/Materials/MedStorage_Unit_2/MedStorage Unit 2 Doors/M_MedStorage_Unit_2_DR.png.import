@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dey7lhyhrqlxi"
+path="res://.godot/imported/M_MedStorage_Unit_2_DR.png-a44c6aa2d10c36fde0341f871f0ffdf9.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MedStorage_Unit_2/MedStorage Unit 2 Doors/M_MedStorage_Unit_2_DR.png"
+dest_files=["res://.godot/imported/M_MedStorage_Unit_2_DR.png-a44c6aa2d10c36fde0341f871f0ffdf9.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

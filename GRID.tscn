@@ -1,0 +1,472 @@
+[gd_scene load_steps=106 format=3 uid="uid://vqssaj4vt30r"]
+
+[ext_resource type="PackedScene" uid="uid://dao4fsda5ve0l" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Ceiling/SM_Hallway_Ceiling.fbx" id="1_vt4wo"]
+[ext_resource type="Texture2D" uid="uid://c7tga1g3c2pq7" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Ceiling/M_Hallway_Ceiling.png" id="2_51b7n"]
+[ext_resource type="PackedScene" uid="uid://2jo4nw434qhf" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Doorway/SM_Hallway_Doorway.fbx" id="3_lthbt"]
+[ext_resource type="Texture2D" uid="uid://cevhdveou7011" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Doorway/M_Hallway_Doorway_Red.png" id="4_eorb7"]
+[ext_resource type="Texture2D" uid="uid://57s4w0egnuss" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Doorway/M_Hallway_Doorway.png" id="5_2hibe"]
+[ext_resource type="Texture2D" uid="uid://cgcm6xtw2iybe" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Doorway/M_Hallway_Doorway_Green.png" id="6_ft0k1"]
+[ext_resource type="PackedScene" uid="uid://d2w1xh3aphefh" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Floor/SM_Hallway_Floor.fbx" id="7_gc07a"]
+[ext_resource type="Texture2D" uid="uid://sgngglgfvgh1" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Floor/M_Hallway_Floor.png" id="8_618r0"]
+[ext_resource type="PackedScene" uid="uid://cb40pknbyu5hd" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Walls/SM_Hallway_Wall_1.fbx" id="9_kqcps"]
+[ext_resource type="Texture2D" uid="uid://ccxhal01oxv5b" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Walls/M_Hallway_Wall_Green.png" id="10_r7ch8"]
+[ext_resource type="PackedScene" uid="uid://d10k8ig7erymx" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Walls/SM_Hallway_Wall_2.fbx" id="11_ih6n6"]
+[ext_resource type="Texture2D" uid="uid://dufmieusc04t1" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Walls/M_Hallway_Wall.png" id="12_udghb"]
+[ext_resource type="PackedScene" uid="uid://b64ad543ka72a" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Hallway_Pieces/Walls/SM_Hallway_Wall_3.fbx" id="13_xydnq"]
+[ext_resource type="Texture2D" uid="uid://bdrmx4m6omjdw" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Walls/M_Hallway_Wall_Red.png" id="14_lfhxi"]
+[ext_resource type="Texture2D" uid="uid://cc6rjq5cl4qw4" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Ceiling/M_MorgueRoom_Ceiling.png" id="16_bjk75"]
+[ext_resource type="Texture2D" uid="uid://cas7u7ki2cm2m" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Doorways/M_MorgueRoom_Doorway_L.png" id="18_0ay0a"]
+[ext_resource type="Texture2D" uid="uid://b00fg72xm4o7u" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Doorways/M_MorgueRoom_Doorway_S.png" id="20_ova6v"]
+[ext_resource type="Texture2D" uid="uid://d1wrc1ibw6imr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Floor/M_MorgueRoom_Floor.png" id="22_rt3ag"]
+[ext_resource type="Texture2D" uid="uid://du76x1iewq4al" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Walls/M_MorgueRoom_Wall_1.png" id="24_ebgca"]
+[ext_resource type="Texture2D" uid="uid://qjsstedp8r08" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Walls/M_MorgueRoom_Wall_2.png" id="26_mxqjv"]
+[ext_resource type="Texture2D" uid="uid://dbmr115svfp2a" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PatientRoom_Pieces/Patient Room Ceiling/M_PatientRoom_Ceiling.png" id="28_45b3h"]
+[ext_resource type="Texture2D" uid="uid://i10l86oepo5d" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PatientRoom_Pieces/Patient Room Doorway/M_PatientRoom_Doorway.png" id="30_1mj7a"]
+[ext_resource type="Texture2D" uid="uid://b2wql7xdyiavq" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PatientRoom_Pieces/Patient Room Floor/M_PatientRoom_Floor.png" id="32_uln8u"]
+[ext_resource type="Texture2D" uid="uid://bb6rdrn7gttp" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PatientRoom_Pieces/Patient Room Walls/M_PatientRoom_Wall_1.png" id="34_o857r"]
+[ext_resource type="Texture2D" uid="uid://71hwoun7bgg6" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PatientRoom_Pieces/Patient Room Walls/M_PatientRoom_Wall_2.png" id="36_4ufxl"]
+[ext_resource type="Texture2D" uid="uid://bcu05em1r0gk7" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Ceiling/M_Reception_Ceiling.png" id="38_tnmqg"]
+[ext_resource type="Texture2D" uid="uid://bu5pw6g5exvvl" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Doorway/M_Reception_Doorway_Green.png" id="40_lk5ql"]
+[ext_resource type="Texture2D" uid="uid://2mye42bmw2pr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Doorway/M_Reception_Entrance.png" id="42_fybjw"]
+[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png" id="44_gox5i"]
+[ext_resource type="Texture2D" uid="uid://b3tw3xdt4fwfx" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception wall/M_Reception_Wall.png" id="46_s0avq"]
+[ext_resource type="Texture2D" uid="uid://fj2lkmkiyr8p" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception wall/M_Reception_Wall_Sign.png" id="48_avc77"]
+[ext_resource type="Texture2D" uid="uid://b0p5xp16oh3up" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/StorageRoom_Pieces/StorageRoom Ceiling/M_StorageRoom_Ceiling.png" id="51_j2cib"]
+[ext_resource type="Texture2D" uid="uid://dt2a2ljs7okwd" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/StorageRoom_Pieces/StorageRoom Doorway/M_StorageRoom_Doorway.png" id="53_e2jtg"]
+[ext_resource type="Texture2D" uid="uid://u0o8ukqike33" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/StorageRoom_Pieces/StorageRoom Floor/M_StorageRoom_Floor.png" id="55_yhnpw"]
+[ext_resource type="Texture2D" uid="uid://dneltcf73mbpg" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/StorageRoom_Pieces/StorageRoom Walls/M_StorageRoom_Wall.png" id="57_xp0xw"]
+[ext_resource type="PackedScene" uid="uid://drve0lwbfxg6e" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Ceiling/SM_MorgueRoom_Ceiling.fbx" id="76_3m8nu"]
+[ext_resource type="PackedScene" uid="uid://bv4i3ijs7g0vc" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Doorways/SM_MorgueRoom_Doorway_L.fbx" id="77_nqisa"]
+[ext_resource type="PackedScene" uid="uid://dd1auf4mqvlo2" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Doorways/SM_MorgueRoom_Doorway_S.fbx" id="78_kdsin"]
+[ext_resource type="PackedScene" uid="uid://8bnhhwvmrvi6" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Floor/SM_MorgueRoom_Floor.fbx" id="79_do3o4"]
+[ext_resource type="PackedScene" uid="uid://dbsct3m3keoif" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Walls/SM_MorgueRoom_Wall_1.fbx" id="80_bfl1l"]
+[ext_resource type="PackedScene" uid="uid://d1y4u44aon6gr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Walls/SM_MorgueRoom_Wall_2.fbx" id="81_bxm27"]
+[ext_resource type="PackedScene" uid="uid://0f2km34ol40e" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PatientRoom_Pieces/Patient Room Ceiling/SM_PatientRoom_Ceiling.fbx" id="105_36pws"]
+[ext_resource type="PackedScene" uid="uid://brgn5w38x28i5" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PatientRoom_Pieces/Patient Room Doorway/SM_PatientRoom_Doorway.fbx" id="106_nf5aq"]
+[ext_resource type="PackedScene" uid="uid://rxyd4h6y27es" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PatientRoom_Pieces/Patient Room Floor/SM_PatientRoom_Floor.fbx" id="107_udp62"]
+[ext_resource type="PackedScene" uid="uid://x05qw4bedwrs" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PatientRoom_Pieces/Patient Room Walls/SM_PatientRoom_Wall_1.fbx" id="108_4pngd"]
+[ext_resource type="PackedScene" uid="uid://bbdnge2u4h8a6" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PatientRoom_Pieces/Patient Room Walls/SM_PatientRoom_Wall_2.fbx" id="109_8w5yc"]
+[ext_resource type="PackedScene" uid="uid://cvj7l0fipq5pi" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Ceiling/SM_Reception_Ceiling.fbx" id="127_ticiw"]
+[ext_resource type="PackedScene" uid="uid://b3367tnq8w68" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Doorway/SM_Reception_Doorway.fbx" id="128_f6cr5"]
+[ext_resource type="PackedScene" uid="uid://dxpp4e3u35d0u" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Doorway/SM_Reception_Entrance.fbx" id="129_fr0rn"]
+[ext_resource type="PackedScene" uid="uid://6ho36gfi542f" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Floor/SM_Reception_Floor.fbx" id="130_nlye4"]
+[ext_resource type="PackedScene" uid="uid://b1nyac02nhrv3" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception wall/SM_Reception_Wall_1.fbx" id="131_31yuv"]
+[ext_resource type="PackedScene" uid="uid://dhata3umk6abw" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception wall/SM_Reception_Wall_2.fbx" id="132_ll3jh"]
+[ext_resource type="PackedScene" uid="uid://byv0rbymfr7d3" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception wall/SM_Reception_Wall_Sign.fbx" id="133_ik77n"]
+[ext_resource type="PackedScene" uid="uid://bwuxn15c7w47m" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/StorageRoom_Pieces/StorageRoom Ceiling/SM_StorageRoom_Ceiling.fbx" id="146_gmnjm"]
+[ext_resource type="PackedScene" uid="uid://dnqcvxiv6ny0c" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/StorageRoom_Pieces/StorageRoom Doorway/SM_StorageRoom_Doorway.fbx" id="147_m3qka"]
+[ext_resource type="PackedScene" uid="uid://baqfaqqs33bp8" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/StorageRoom_Pieces/StorageRoom Floor/SM_StorageRoom_Floor.fbx" id="148_ntctq"]
+[ext_resource type="PackedScene" uid="uid://4j636edc30jk" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/StorageRoom_Pieces/StorageRoom Walls/SM_StorageRoom_Wall.fbx" id="149_gj8on"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7i02b"]
+albedo_texture = ExtResource("2_51b7n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vt4wo"]
+albedo_texture = ExtResource("2_51b7n")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bjk75"]
+data = PackedVector3Array(-1.4678, 0.1064, -1.9505, 1.4678, 0.1064, -1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, -1.4678, 0.1064, 1.9505, -1.4678, 0.1064, -1.9505, -1.4678, -0.1064, -1.9505, -1.4678, -0.1064, 1.9505, 1.4678, -0.1064, 1.9505, 1.4678, -0.1064, 1.9505, 1.4678, -0.1064, -1.9505, -1.4678, -0.1064, -1.9505, -1.4678, -0.1064, 1.9505, -1.4678, -0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, 0.1064, 1.9505, -1.4678, -0.1064, 1.9505, 1.4678, -0.1064, -1.9505, 1.4678, -0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, -1.9505, 1.4678, -0.1064, -1.9505, 1.4678, -0.1064, 1.9505, -1.4678, -0.1064, 1.9505, -1.4678, 0.1064, 1.9505, -1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, -0.1064, 1.9505, -1.4678, -0.1064, -1.9505, 1.4678, -0.1064, -1.9505, 1.4678, 0.1064, -1.9505, 1.4678, 0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, -0.1064, -1.9505)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8p0y"]
+albedo_texture = ExtResource("4_eorb7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhjsm"]
+albedo_texture = ExtResource("5_2hibe")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0ay0a"]
+data = PackedVector3Array(0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, -1.5091, -0.0448, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, -1.1174, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, -0.0448, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.0507, -0.9853, 0.0436, 1.3826, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1167, -0.9853, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, -1.1167, 0.9828, 0.0436, -1.1174, 1.5116, 0.0436, -1.1174, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, -1.5091, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.3826, 1.5116, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, -0.9853, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, -1.1167, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.3826, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, -1.1174, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.0507, -0.9853, -0.0448, 1.0507, -0.9853, -0.0448, -1.1167, -0.9853, -0.0448, -1.1174, -1.5091, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, 0.0933, 1.0507, -0.9853, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, 0.902, -0.0921, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 1.0507, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 1.0507, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, 0.902, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, -0.9853, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 1.0507, 0.9828, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 0.9833, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 0.9833, 0.902)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5sog"]
+albedo_texture = ExtResource("5_2hibe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hpxme"]
+albedo_texture = ExtResource("6_ft0k1")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ova6v"]
+data = PackedVector3Array(0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, -1.5091, -0.0448, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, -1.1174, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, -0.0448, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.0507, -0.9853, 0.0436, 1.3826, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1167, -0.9853, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, -1.1167, 0.9828, 0.0436, -1.1174, 1.5116, 0.0436, -1.1174, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, -1.5091, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.3826, 1.5116, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, -0.9853, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, -1.1167, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.3826, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, -1.1174, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.0507, -0.9853, -0.0448, 1.0507, -0.9853, -0.0448, -1.1167, -0.9853, -0.0448, -1.1174, -1.5091, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, 0.0933, 1.0507, -0.9853, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, 0.902, -0.0921, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 1.0507, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 1.0507, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, 0.902, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, -0.9853, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 1.0507, 0.9828, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 0.9833, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 0.9833, 0.902)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1apeo"]
+albedo_texture = ExtResource("6_ft0k1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ojl0"]
+albedo_texture = ExtResource("4_eorb7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rt3ag"]
+data = PackedVector3Array(0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, -1.5091, -0.0448, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, -1.1174, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, 1.3826, 1.5116, -0.0448, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, -1.5091, 0.0436, 1.3826, 1.5116, -0.0448, 1.3826, 1.5116, 0.0436, 1.0507, -0.9853, 0.0436, 1.3826, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1174, -1.5091, 0.0436, -1.1167, -0.9853, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, -1.1167, 0.9828, 0.0436, -1.1174, 1.5116, 0.0436, -1.1174, 1.5116, 0.0436, 1.3826, 1.5116, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, -1.5091, 0.0436, 1.0507, -0.9853, 0.0436, 1.0507, 0.9828, 0.0436, 1.0507, 0.9828, 0.0436, 1.3826, 1.5116, 0.0436, 1.3826, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.3826, 1.5116, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, -0.9853, -0.0448, 1.3826, -1.5091, -0.0448, -1.1174, 1.5116, -0.0448, -1.1167, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.0507, 0.9828, -0.0448, 1.3826, 1.5116, -0.0448, -1.1174, 1.5116, -0.0448, -1.1174, -1.5091, -0.0448, 1.3826, -1.5091, -0.0448, 1.0507, -0.9853, -0.0448, 1.0507, -0.9853, -0.0448, -1.1167, -0.9853, -0.0448, -1.1174, -1.5091, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, 0.0933, 1.0507, -0.9853, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, -0.0921, 1.0507, 0.9828, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, 0.902, -0.0921, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.902, 0.0933, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 1.0507, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.9828, -0.0921, -1.1167, 0.902, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.9853, -0.0921, -1.1167, -0.9853, -0.0921, 1.0507, -0.9853, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 1.0507, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.9853, 0.0933, -1.1167, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, 0.902, 0.0933, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, 0.902, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 1.0507, -0.9853, 0.0933, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, 0.0933, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, -1.1167, -0.8995, -0.0921, 0.9833, -0.8995, 0.0933, 0.9833, -0.8995, -0.0921, 1.0507, 0.9828, -0.0921, 0.9833, 0.902, -0.0921, 0.9833, -0.8995, -0.0921, 0.9833, -0.8995, -0.0921, 1.0507, -0.9853, -0.0921, 1.0507, 0.9828, 0.0933, 0.9833, 0.902, 0.0933, -1.1167, 0.902, 0.0933, -1.1167, 0.9828, 0.0933, -1.1167, 0.9828, 0.0933, 1.0507, 0.9828, 0.0933, 0.9833, 0.902)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xdi1"]
+albedo_texture = ExtResource("8_618r0")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ebgca"]
+data = PackedVector3Array(-1.4678, 0.1064, -1.9505, 1.4678, 0.1064, -1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, -1.4678, 0.1064, 1.9505, -1.4678, 0.1064, -1.9505, -1.4678, -0.1064, -1.9505, -1.4678, -0.1064, 1.9505, 1.4678, -0.1064, 1.9505, 1.4678, -0.1064, 1.9505, 1.4678, -0.1064, -1.9505, -1.4678, -0.1064, -1.9505, -1.4678, -0.1064, 1.9505, -1.4678, -0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, 0.1064, 1.9505, -1.4678, -0.1064, 1.9505, 1.4678, -0.1064, -1.9505, 1.4678, -0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, 0.1064, -1.9505, 1.4678, -0.1064, -1.9505, 1.4678, -0.1064, 1.9505, -1.4678, -0.1064, 1.9505, -1.4678, 0.1064, 1.9505, -1.4678, 0.1064, 1.9505, 1.4678, 0.1064, 1.9505, 1.4678, -0.1064, 1.9505, -1.4678, -0.1064, -1.9505, 1.4678, -0.1064, -1.9505, 1.4678, 0.1064, -1.9505, 1.4678, 0.1064, -1.9505, -1.4678, 0.1064, -1.9505, -1.4678, -0.1064, -1.9505)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pw308"]
+albedo_texture = ExtResource("12_udghb")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mxqjv"]
+data = PackedVector3Array(0.0442, 1.25, -1.9278, 0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, -1.9278, 0.0442, 1.25, -1.9278, 0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, -1.25, 1.9278, 0.0442, -1.25, -1.9278, 0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, -1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, 1.25, -1.9278, 0.0442, -1.25, -1.9278, -0.0442, 1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, -1.9278, -0.0442, -1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, 1.9278)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lkq8q"]
+albedo_texture = ExtResource("10_r7ch8")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_45b3h"]
+data = PackedVector3Array(0.0442, 1.25, -1.9278, 0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, -1.9278, 0.0442, 1.25, -1.9278, 0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, -1.25, 1.9278, 0.0442, -1.25, -1.9278, 0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, -1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, 1.25, -1.9278, 0.0442, 1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, 1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, -1.9278, -0.0442, 1.25, -1.9278)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24ie5"]
+albedo_texture = ExtResource("14_lfhxi")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1mj7a"]
+data = PackedVector3Array(0.0442, 1.25, 1.9278, -0.0442, 1.25, 1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, 0.0442, 1.25, -1.9278, 0.0442, 1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, 1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, -1.25, -1.9278, 0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, -1.9278, -0.0442, -1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, 1.9278, 0.0442, 1.25, 1.9278, 0.0442, 1.25, -1.9278, 0.0442, 1.25, -1.9278, 0.0442, -1.25, -1.9278, 0.0442, -1.25, 1.9278, -0.0442, 1.25, -1.9278, -0.0442, 1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, 1.9278, -0.0442, -1.25, -1.9278, -0.0442, 1.25, -1.9278)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g4iq4"]
+albedo_texture = ExtResource("6_ft0k1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36trv"]
+albedo_texture = ExtResource("8_618r0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ss5ga"]
+albedo_texture = ExtResource("12_udghb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rnnj8"]
+albedo_texture = ExtResource("10_r7ch8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_807p0"]
+albedo_texture = ExtResource("14_lfhxi")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dym2f"]
+albedo_texture = ExtResource("16_bjk75")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_owdge"]
+albedo_texture = ExtResource("18_0ay0a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctqxs"]
+albedo_texture = ExtResource("20_ova6v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hb05w"]
+albedo_texture = ExtResource("22_rt3ag")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4lrhu"]
+albedo_texture = ExtResource("24_ebgca")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3vkj"]
+albedo_texture = ExtResource("26_mxqjv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqqnt"]
+albedo_texture = ExtResource("28_45b3h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocbej"]
+albedo_texture = ExtResource("30_1mj7a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4mjq"]
+albedo_texture = ExtResource("32_uln8u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rybg"]
+albedo_texture = ExtResource("34_o857r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yaxs"]
+albedo_texture = ExtResource("36_4ufxl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf5jc"]
+albedo_texture = ExtResource("38_tnmqg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa1ku"]
+albedo_texture = ExtResource("40_lk5ql")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckb7e"]
+albedo_texture = ExtResource("42_fybjw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkgic"]
+albedo_texture = ExtResource("44_gox5i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l41tr"]
+albedo_texture = ExtResource("46_s0avq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpqoa"]
+albedo_texture = ExtResource("48_avc77")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2iet"]
+albedo_texture = ExtResource("46_s0avq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mm3s"]
+albedo_texture = ExtResource("2_51b7n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3qao"]
+albedo_texture = ExtResource("51_j2cib")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2l3b"]
+albedo_texture = ExtResource("53_e2jtg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdsjy"]
+albedo_texture = ExtResource("55_yhnpw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qutst"]
+albedo_texture = ExtResource("57_xp0xw")
+
+[node name="grids" type="Node3D"]
+
+[node name="techo" parent="." instance=ExtResource("1_vt4wo")]
+
+[node name="SM_Hallway_Ceiling" parent="techo" index="0"]
+material_override = SubResource("StandardMaterial3D_7i02b")
+surface_material_override/0 = SubResource("StandardMaterial3D_vt4wo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="techo/SM_Hallway_Ceiling" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="techo/SM_Hallway_Ceiling/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_bjk75")
+
+[node name="entrada1" parent="." instance=ExtResource("3_lthbt")]
+
+[node name="SM_Hallway_Doorway" parent="entrada1" index="0"]
+material_override = SubResource("StandardMaterial3D_r8p0y")
+surface_material_override/0 = SubResource("StandardMaterial3D_vhjsm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="entrada1/SM_Hallway_Doorway" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="entrada1/SM_Hallway_Doorway/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_0ay0a")
+
+[node name="entrada2" parent="." instance=ExtResource("3_lthbt")]
+
+[node name="SM_Hallway_Doorway" parent="entrada2" index="0"]
+material_override = SubResource("StandardMaterial3D_e5sog")
+surface_material_override/0 = SubResource("StandardMaterial3D_hpxme")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="entrada2/SM_Hallway_Doorway" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="entrada2/SM_Hallway_Doorway/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ova6v")
+
+[node name="entrada3" parent="." instance=ExtResource("3_lthbt")]
+
+[node name="SM_Hallway_Doorway" parent="entrada3" index="0"]
+material_override = SubResource("StandardMaterial3D_1apeo")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ojl0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="entrada3/SM_Hallway_Doorway" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="entrada3/SM_Hallway_Doorway/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rt3ag")
+
+[node name="piso" parent="." instance=ExtResource("7_gc07a")]
+
+[node name="SM_Hallway_Floor" parent="piso" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_0xdi1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="piso/SM_Hallway_Floor" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="piso/SM_Hallway_Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ebgca")
+
+[node name="wall1" parent="." instance=ExtResource("9_kqcps")]
+
+[node name="SM_Hallway_Wall_1" parent="wall1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pw308")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall1/SM_Hallway_Wall_1" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall1/SM_Hallway_Wall_1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_mxqjv")
+
+[node name="wall2" parent="." instance=ExtResource("11_ih6n6")]
+
+[node name="SM_Hallway_Wall_2" parent="wall2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_lkq8q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall2/SM_Hallway_Wall_2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/SM_Hallway_Wall_2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_45b3h")
+
+[node name="wall3" parent="." instance=ExtResource("13_xydnq")]
+
+[node name="SM_Hallway_Wall_3" parent="wall3" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_24ie5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall3/SM_Hallway_Wall_3" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall3/SM_Hallway_Wall_3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1mj7a")
+
+[node name="entrada_pasillo" parent="." instance=ExtResource("3_lthbt")]
+
+[node name="SM_Hallway_Doorway" parent="entrada_pasillo" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_g4iq4")
+
+[node name="piso_pasillos" parent="." instance=ExtResource("7_gc07a")]
+
+[node name="SM_Hallway_Floor" parent="piso_pasillos" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_36trv")
+
+[node name="wall_pasillo" parent="." instance=ExtResource("9_kqcps")]
+
+[node name="SM_Hallway_Wall_1" parent="wall_pasillo" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ss5ga")
+
+[node name="wall2_pasillo" parent="." instance=ExtResource("11_ih6n6")]
+
+[node name="SM_Hallway_Wall_2" parent="wall2_pasillo" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_rnnj8")
+
+[node name="wall3_pasillo" parent="." instance=ExtResource("13_xydnq")]
+
+[node name="SM_Hallway_Wall_3" parent="wall3_pasillo" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_807p0")
+
+[node name="morgue_techo" parent="." instance=ExtResource("76_3m8nu")]
+
+[node name="SM_MorgueRoom_Ceiling" parent="morgue_techo" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_dym2f")
+
+[node name="morgue_puerta" parent="." instance=ExtResource("77_nqisa")]
+
+[node name="SM_MorgueRoom_Doorway_L" parent="morgue_puerta" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_owdge")
+
+[node name="morgue_puerta2" parent="." instance=ExtResource("78_kdsin")]
+
+[node name="SM_MorgueRoom_Doorway_S" parent="morgue_puerta2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ctqxs")
+
+[node name="piso_morgue" parent="." instance=ExtResource("79_do3o4")]
+
+[node name="SM_MorgueRoom_Floor" parent="piso_morgue" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hb05w")
+
+[node name="pared_morgue" parent="." instance=ExtResource("80_bfl1l")]
+
+[node name="SM_MorgueRoom_Wall_1" parent="pared_morgue" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_4lrhu")
+
+[node name="pared2_morgue" parent="." instance=ExtResource("81_bxm27")]
+
+[node name="SM_MorgueRoom_Wall_2" parent="pared2_morgue" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_x3vkj")
+
+[node name="techo_morgue" parent="." instance=ExtResource("105_36pws")]
+
+[node name="SM_PatientRoom_Ceiling" parent="techo_morgue" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_eqqnt")
+
+[node name="SM_PatientRoom_Doorway" parent="." instance=ExtResource("106_nf5aq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00586319, -1.90735e-06, -0.0304241)
+
+[node name="SM_PatientRoom_Doorway" parent="SM_PatientRoom_Doorway" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ocbej")
+
+[node name="SM_PatientRoom_Floor" parent="." instance=ExtResource("107_udp62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00586319, -1.90735e-06, -0.0304241)
+
+[node name="SM_PatientRoom_Floor" parent="SM_PatientRoom_Floor" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_j4mjq")
+
+[node name="SM_PatientRoom_Wall_1" parent="." instance=ExtResource("108_4pngd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00586319, -1.90735e-06, -0.0304241)
+
+[node name="SM_PatientRoom_Wall_1" parent="SM_PatientRoom_Wall_1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_7rybg")
+
+[node name="SM_PatientRoom_Wall_2" parent="." instance=ExtResource("109_8w5yc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00586319, -1.90735e-06, -0.0304241)
+
+[node name="SM_PatientRoom_Wall_2" parent="SM_PatientRoom_Wall_2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6yaxs")
+
+[node name="SM_Reception_Ceiling" parent="." instance=ExtResource("127_ticiw")]
+
+[node name="SM_Reception_Ceiling" parent="SM_Reception_Ceiling" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pf5jc")
+
+[node name="SM_Reception_Doorway" parent="." instance=ExtResource("128_f6cr5")]
+
+[node name="SM_Reception_Doorway" parent="SM_Reception_Doorway" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_sa1ku")
+
+[node name="SM_Reception_Entrance" parent="." instance=ExtResource("129_fr0rn")]
+
+[node name="SM_Reception_Entrance" parent="SM_Reception_Entrance" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.6279)
+surface_material_override/0 = SubResource("StandardMaterial3D_ckb7e")
+
+[node name="SM_Reception_Floor" parent="." instance=ExtResource("130_nlye4")]
+
+[node name="SM_Reception_Floor" parent="SM_Reception_Floor" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gkgic")
+
+[node name="SM_Reception_Wall_1" parent="." instance=ExtResource("131_31yuv")]
+
+[node name="SM_Reception_Wall_1" parent="SM_Reception_Wall_1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_l41tr")
+
+[node name="SM_Reception_Wall_2" parent="." instance=ExtResource("132_ll3jh")]
+
+[node name="SM_Reception_Wall_2" parent="SM_Reception_Wall_2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_tpqoa")
+
+[node name="SM_Reception_Wall_Sign" parent="." instance=ExtResource("133_ik77n")]
+
+[node name="SM_Reception_Wall_Sign" parent="SM_Reception_Wall_Sign" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.787763)
+surface_material_override/0 = SubResource("StandardMaterial3D_u2iet")
+
+[node name="SM_Hallway_Ceiling" parent="." instance=ExtResource("1_vt4wo")]
+
+[node name="SM_Hallway_Ceiling" parent="SM_Hallway_Ceiling" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6mm3s")
+
+[node name="SM_StorageRoom_Ceiling" parent="." instance=ExtResource("146_gmnjm")]
+
+[node name="SM_StorageRoom_Ceiling" parent="SM_StorageRoom_Ceiling" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_n3qao")
+
+[node name="SM_StorageRoom_Doorway" parent="." instance=ExtResource("147_m3qka")]
+
+[node name="SM_StorageRoom_Doorway" parent="SM_StorageRoom_Doorway" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_t2l3b")
+
+[node name="SM_StorageRoom_Floor" parent="." instance=ExtResource("148_ntctq")]
+
+[node name="SM_StorageRoom_Floor" parent="SM_StorageRoom_Floor" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cdsjy")
+
+[node name="SM_StorageRoom_Wall" parent="." instance=ExtResource("149_gj8on")]
+
+[node name="SM_StorageRoom_Wall" parent="SM_StorageRoom_Wall" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qutst")
+
+[editable path="techo"]
+[editable path="entrada1"]
+[editable path="entrada2"]
+[editable path="entrada3"]
+[editable path="piso"]
+[editable path="wall1"]
+[editable path="wall2"]
+[editable path="wall3"]
+[editable path="entrada_pasillo"]
+[editable path="piso_pasillos"]
+[editable path="wall_pasillo"]
+[editable path="wall2_pasillo"]
+[editable path="wall3_pasillo"]
+[editable path="morgue_techo"]
+[editable path="morgue_puerta"]
+[editable path="morgue_puerta2"]
+[editable path="piso_morgue"]
+[editable path="pared_morgue"]
+[editable path="pared2_morgue"]
+[editable path="techo_morgue"]
+[editable path="SM_PatientRoom_Doorway"]
+[editable path="SM_PatientRoom_Floor"]
+[editable path="SM_PatientRoom_Wall_1"]
+[editable path="SM_PatientRoom_Wall_2"]
+[editable path="SM_Reception_Ceiling"]
+[editable path="SM_Reception_Doorway"]
+[editable path="SM_Reception_Entrance"]
+[editable path="SM_Reception_Floor"]
+[editable path="SM_Reception_Wall_1"]
+[editable path="SM_Reception_Wall_2"]
+[editable path="SM_Reception_Wall_Sign"]
+[editable path="SM_Hallway_Ceiling"]
+[editable path="SM_StorageRoom_Ceiling"]
+[editable path="SM_StorageRoom_Doorway"]
+[editable path="SM_StorageRoom_Floor"]
+[editable path="SM_StorageRoom_Wall"]

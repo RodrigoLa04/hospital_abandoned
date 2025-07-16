@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://7qkj1a1w64u8"]
+
+[ext_resource type="PackedScene" uid="uid://dd1auf4mqvlo2" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Doorways/SM_MorgueRoom_Doorway_S.fbx" id="1_46rjn"]
+[ext_resource type="Texture2D" uid="uid://b00fg72xm4o7u" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Doorways/M_MorgueRoom_Doorway_S.png" id="2_fbto7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkr5h"]
+albedo_texture = ExtResource("2_fbto7")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4tc3f"]
+points = PackedVector3Array(-0.0581375, -1.17986, -2.35194, -0.0964117, -1.17927, -0.862663, -0.0581375, 1.82014, -2.35194, 0.055826, -1.17986, -2.35194, -0.0581375, -1.17986, 2.74112, -0.0964117, 0.987917, -0.862663, -0.0964117, -1.17927, 0.73032, 0.055826, 1.82014, -2.35194, -0.0581375, 1.82014, 2.74112, 0.098684, -1.17927, -0.862663, 0.055826, -1.17986, 2.74112, -0.0964117, 0.987917, 0.73032, 0.055826, 1.82014, 2.74112, 0.098684, 0.987917, -0.862663, 0.098684, -1.17927, 0.73032, 0.098684, 0.987917, 0.73032)
+
+[node name="door_consul" type="StaticBody3D"]
+
+[node name="SM_MorgueRoom_Doorway_S" parent="." instance=ExtResource("1_46rjn")]
+
+[node name="SM_MorgueRoom_Doorway_S" parent="SM_MorgueRoom_Doorway_S" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_gkr5h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_4tc3f")
+
+[editable path="SM_MorgueRoom_Doorway_S"]

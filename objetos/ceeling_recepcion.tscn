@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://blq1snu6mjuyc"]
+
+[ext_resource type="PackedScene" uid="uid://cvj7l0fipq5pi" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Ceiling/SM_Reception_Ceiling.fbx" id="1_n8a6d"]
+[ext_resource type="Texture2D" uid="uid://bcu05em1r0gk7" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Ceiling/M_Reception_Ceiling.png" id="2_0jbt7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iv2qv"]
+albedo_texture = ExtResource("2_0jbt7")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3d1dl"]
+points = PackedVector3Array(1.45648, 0.106359, 1.98365, 1.45648, -0.106359, 1.98365, 1.45619, 0.106359, -1.98404, -1.45648, 0.106359, 1.98365, -1.45648, -0.106359, 1.98365, 1.45619, -0.106359, -1.98404, -1.45648, 0.106359, -1.98404, -1.45648, -0.106359, -1.98404)
+
+[node name="ceeeling_recepcion" type="StaticBody3D"]
+
+[node name="SM_Reception_Ceiling" parent="." instance=ExtResource("1_n8a6d")]
+
+[node name="SM_Reception_Ceiling" parent="SM_Reception_Ceiling" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_iv2qv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_3d1dl")
+
+[editable path="SM_Reception_Ceiling"]
