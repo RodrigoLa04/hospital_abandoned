@@ -35,7 +35,6 @@ environment = SubResource("Environment_ltaq5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01734, 0.372461, 1.31093)
 
 [node name="base" type="Node3D" parent="."]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="floor" type="CSGBox3D" parent="base"]
@@ -182,13 +181,22 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8092, 0.033841, -7.30239)
 
 [node name="wall_hallway" parent="." instance=ExtResource("3_ltaq5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.084493, 0.777046, 1.65226)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.28125e-09, 0.777, 1.62591)
 
 [node name="wall_hallway2" parent="." instance=ExtResource("3_ltaq5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.084493, 0.777046, -2.16883)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.48304e-09, 0.777, -2.23172)
 
 [node name="wall_hallway3" parent="." instance=ExtResource("3_ltaq5")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.084493, 0.777046, -6.01789)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.777, -6.018)
+
+[node name="wall_hallway10" parent="." instance=ExtResource("3_ltaq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79961, 0.777, 1.652)
+
+[node name="wall_hallway11" parent="." instance=ExtResource("3_ltaq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79961, 0.777, -2.17414)
+
+[node name="wall_hallway12" parent="." instance=ExtResource("3_ltaq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79961, 0.777, -6.018)
 
 [node name="wall_hallway4" parent="." instance=ExtResource("3_ltaq5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.95836, 0.777046, -7.97371)
@@ -212,10 +220,10 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.31
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45103, -0.527962, 1.58299)
 
 [node name="floor_recepcion2" parent="." instance=ExtResource("4_lmpc3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35291, -0.527962, 1.58299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3567, -0.528, 1.583)
 
 [node name="floor_recepcion3" parent="." instance=ExtResource("4_lmpc3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35291, -0.527962, 1.58299)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3567, -0.528, 1.583)
 
 [node name="floor_recepcion4" parent="." instance=ExtResource("4_lmpc3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35291, -0.527962, -2.39256)
@@ -228,3 +236,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4851, -0.527962, -6.29426)
 
 [node name="floor_recepcion7" parent="." instance=ExtResource("4_lmpc3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.38984, -0.527962, -6.29426)
+
+[node name="floor_recepcion8" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.38984, -0.527962, -10.1882)
+
+[node name="floor_recepcion9" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63277, -0.527962, -10.1882)
+
+[node name="floor_recepcion10" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29064, -0.527962, -9.88161)
+
+[node name="floor_recepcion11" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13608, -0.545818, -9.88161)
+
+[node name="floor_recepcion12" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.98902, -0.545818, -9.88161)
+
+[node name="floor_recepcion13" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.8563, -0.545818, -9.88161)
+
+[node name="floor_recepcion14" parent="." instance=ExtResource("4_lmpc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7954, -0.545818, -9.88161)
