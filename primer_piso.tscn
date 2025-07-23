@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=8 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
 [ext_resource type="PackedScene" uid="uid://cuug13kprxvxv" path="res://objetos/wall_hallway.tscn" id="3_ltxmr"]
 [ext_resource type="PackedScene" uid="uid://d2panjwf6x4ed" path="res://objetos/doorway.tscn" id="4_0e7uk"]
 [ext_resource type="PackedScene" uid="uid://blq1snu6mjuyc" path="res://objetos/ceeling_recepcion.tscn" id="5_0e7uk"]
+[ext_resource type="PackedScene" uid="uid://bminsma78y14j" path="res://objetos/paredes_consultorios.tscn" id="6_f2t18"]
+[ext_resource type="PackedScene" uid="uid://7qkj1a1w64u8" path="res://objetos/door_consul.tscn" id="7_xx18s"]
 
 [node name="primer_piso" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("2_lqpkw")]
-transform = Transform3D(0.965466, -0.00119069, -0.260525, 0.00222954, 0.999991, 0.00369206, 0.260518, -0.00414541, 0.96546, 0.172437, 0.806338, 0.203649)
+transform = Transform3D(0.965466, -0.00119069, -0.260525, 0.00222954, 0.999991, 0.00369206, 0.260518, -0.00414541, 0.96546, -24.2749, 0.95908, -14.3974)
 
 [node name="FLOOR" type="Node3D" parent="."]
 
@@ -1269,12 +1271,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1, 0, -19.85)
 [node name="floor_recepcion36" parent="FLOOR" instance=ExtResource("2_y0gpt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.1, 0, -23.82)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.4, 0, -23.2)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1, 0, -23.2)
-
 [node name="paredesRecepcion" type="Node3D" parent="."]
 
 [node name="wall_hallway" parent="paredesRecepcion" instance=ExtResource("3_ltxmr")]
@@ -1344,7 +1340,7 @@ transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -10.9, 1
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -14.7, 1.35634, -17.1)
 
 [node name="wall_hallway10" parent="paredesRecepcion" instance=ExtResource("3_ltxmr")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.5, 1.35634, -17.1)
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, -18.5, 1.35634, -17.1)
 
 [node name="wall_hallway38" parent="paredesRecepcion" instance=ExtResource("3_ltxmr")]
 transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -18.4, 1.35634, -20.2)
@@ -1388,125 +1384,676 @@ transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 27.2, 
 [node name="wall_hallway51" parent="paredesRecepcion" instance=ExtResource("3_ltxmr")]
 transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 27.2, 1.35634, -20.2)
 
-[node name="doorway_recepcion" parent="." instance=ExtResource("4_0e7uk")]
+[node name="doorway_recepcion" parent="paredesRecepcion" instance=ExtResource("4_0e7uk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.35, 1.28621, -18.65)
 
-[node name="doorway_recepcion2" parent="." instance=ExtResource("4_0e7uk")]
+[node name="doorway_recepcion2" parent="paredesRecepcion" instance=ExtResource("4_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.1, 1.28621, 2)
 
-[node name="ceeeling_recepcion" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815867, 2.7127, 0.528207)
 
-[node name="ceeeling_recepcion2" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion2" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815865, 2.7127, -2.37179)
 
-[node name="ceeeling_recepcion3" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion3" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815864, 2.7127, -5.27179)
 
-[node name="ceeeling_recepcion4" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion4" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815863, 2.7127, -8.17179)
 
-[node name="ceeeling_recepcion5" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion5" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815861, 2.7127, -11.0718)
 
-[node name="ceeeling_recepcion6" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion6" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.081586, 2.7127, -13.9718)
 
-[node name="ceeeling_recepcion7" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion7" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815859, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion8" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion8" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815858, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion9" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion9" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815858, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion10" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion10" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815859, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion11" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion11" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0815858, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion12" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion12" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.88841, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion13" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion13" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.88841, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion14" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion14" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.85841, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion15" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion15" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.85841, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion16" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion16" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8284, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion17" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion17" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8284, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion18" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion18" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.7984, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion19" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion19" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.7984, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion20" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion20" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion21" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion38" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion39" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion40" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion41" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion42" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion43" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion44" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion45" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion46" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion47" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion48" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion49" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -16.8718)
+
+[node name="ceeeling_recepcion21" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion22" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion60" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion137" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion138" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion139" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion140" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion141" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion142" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion143" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion144" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion145" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion146" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -22.6718)
+
+[node name="ceeeling_recepcion61" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion147" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion148" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion149" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion150" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion151" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion152" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion153" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion154" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion155" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion156" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -25.5718)
+
+[node name="ceeeling_recepcion62" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion157" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion158" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion159" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion160" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion161" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion162" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion163" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion164" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion165" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion166" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -28.4718)
+
+[node name="ceeeling_recepcion63" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion167" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion168" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion169" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion170" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion171" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion172" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion173" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion174" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion175" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion176" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion177" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -31.3718)
+
+[node name="ceeeling_recepcion64" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion178" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion179" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion180" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion181" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion182" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion183" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion184" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion185" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion186" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion187" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion188" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -34.2718)
+
+[node name="ceeeling_recepcion65" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion189" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion190" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion191" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion192" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion193" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion194" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion195" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion196" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion197" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion198" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -37.1718)
+
+[node name="ceeeling_recepcion66" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion73" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion74" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion75" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion76" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion77" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion78" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion79" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion80" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion81" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion82" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion83" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -13.9718)
+
+[node name="ceeeling_recepcion67" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion84" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion85" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion86" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion87" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion88" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion89" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion90" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion91" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion92" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion93" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion94" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -11.0718)
+
+[node name="ceeeling_recepcion68" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion95" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion96" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion97" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion98" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion99" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion100" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion101" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion102" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion103" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion104" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion105" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -63.4384, 2.7127, -8.1718)
+
+[node name="ceeeling_recepcion69" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion106" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion107" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion108" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion109" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion110" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion111" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion112" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion113" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion114" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion115" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion116" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -63.4384, 2.7127, -5.2718)
+
+[node name="ceeeling_recepcion70" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion117" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion118" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion119" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion120" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion121" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion122" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion123" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion124" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion125" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion126" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -2.3718)
+
+[node name="ceeeling_recepcion71" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion72" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.7684, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion127" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion128" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion129" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion130" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion131" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion132" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion133" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion134" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion135" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion136" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, 0.528202)
+
+[node name="ceeeling_recepcion50" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.7384, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion51" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.7084, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion52" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.6784, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion53" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.6484, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion54" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.6184, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion55" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5884, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion56" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5584, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion57" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51.5284, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion58" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -55.4984, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion59" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -59.4684, 2.7127, -19.7718)
+
+[node name="ceeeling_recepcion22" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.05159, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion23" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion23" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.05158, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion24" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion24" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.02159, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion25" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion25" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.02158, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion26" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion26" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.9916, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion27" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion27" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.9916, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion28" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion28" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.9616, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion29" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion29" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.9616, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion30" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion30" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.9316, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion31" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion31" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.9316, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion32" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion32" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9016, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion33" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion33" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.9016, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion34" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion34" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27.8716, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion35" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion35" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27.8716, 2.7127, -19.7718)
 
-[node name="ceeeling_recepcion36" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion36" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27.8716, 2.7127, -16.8718)
 
-[node name="ceeeling_recepcion37" parent="." instance=ExtResource("5_0e7uk")]
+[node name="ceeeling_recepcion37" parent="paredesRecepcion" instance=ExtResource("5_0e7uk")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 27.8716, 2.7127, -19.7718)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="Luces" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Luces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52468, -18.5666)
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2, 2.52468, -18.6666)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Luces"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.9, 2.52468, -11.1666)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Luces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52468, -5.59692)
+
+[node name="ParedesConsultorios" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4, 1.6, -12.7)
+
+[node name="ParedesConsultorios8" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4, 1.6, -24.75)
+
+[node name="door_consul" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.2, 1.3, -8.2)
+
+[node name="door_consul2" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.2, 1.2862, -8.2)
+
+[node name="door_consul3" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5, 1.2862, -19.85)
+
+[node name="ParedesConsultorios2" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -30, 1.62777, -8.2)
+
+[node name="ParedesConsultorios9" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 1.62777, -14.173)
+
+[node name="ParedesConsultorios10" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 1.62777, -14.173)
+
+[node name="ParedesConsultorios11" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40, 1.62777, -23.173)
+
+[node name="ParedesConsultorios12" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 1.62777, -23.173)
+
+[node name="ParedesConsultorios13" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.44, -26.6, 1.62777, -21.173)
+
+[node name="ParedesConsultorios14" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5, 1.62777, -18.673)
+
+[node name="ParedesConsultorios3" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -44, 1.62777, -8.2)
+
+[node name="door_consul5" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -45.7, 1.3, -29.25)
+
+[node name="door_consul6" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -31.7, 1.2862, -29.25)
+
+[node name="ParedesConsultorios6" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -38.9, 1.62777, -29.25)
+
+[node name="ParedesConsultorios7" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.9, 1.62777, -29.25)
+
+[node name="ParedesConsultorios4" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5, 1.62777, -12.75)
+
+[node name="ParedesConsultorios5" parent="." instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5, 1.62777, -26.7)
+
+[node name="door_consul4" parent="." instance=ExtResource("7_xx18s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6, 1.2862, -16.9)

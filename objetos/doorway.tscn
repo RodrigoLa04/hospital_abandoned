@@ -11,9 +11,7 @@ albedo_texture = ExtResource("2_v6xax")
 
 [node name="doorway_recepcion" type="StaticBody3D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_fvbg0")
 
 [node name="SM_Reception_Doorway" parent="." instance=ExtResource("1_fvbg0")]

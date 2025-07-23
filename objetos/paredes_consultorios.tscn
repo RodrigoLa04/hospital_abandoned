@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bminsma78y14j"]
+
+[ext_resource type="PackedScene" uid="uid://dbsct3m3keoif" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueRoom_Pieces/MorgueRoom Walls/SM_MorgueRoom_Wall_1.fbx" id="1_u823p"]
+[ext_resource type="Texture2D" uid="uid://du76x1iewq4al" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Walls/M_MorgueRoom_Wall_1.png" id="2_oev0m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2jrha"]
+albedo_texture = ExtResource("2_oev0m")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_thtls"]
+points = PackedVector3Array(0.157286, 1.57143, 4.57143, -0.128429, -1.57143, -4.57143, 0.157286, -1.57143, -4.57143, -0.128429, -1.57143, 4.57143, -0.128429, 1.57143, -4.57143, 0.157286, 1.57143, -4.57143, 0.157286, -1.57143, 4.57143, -0.128429, 1.57143, 4.57143)
+
+[node name="ParedesConsultorios" type="StaticBody3D"]
+
+[node name="SM_MorgueRoom_Wall_1" parent="." instance=ExtResource("1_u823p")]
+
+[node name="SM_MorgueRoom_Wall_1" parent="SM_MorgueRoom_Wall_1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_2jrha")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_thtls")
+
+[editable path="SM_MorgueRoom_Wall_1"]
