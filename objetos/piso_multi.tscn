@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=4 uid="uid://cmi5pkdi77gj2"]
+
+[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png" id="1_521lk"]
+[ext_resource type="Script" uid="uid://b20kvgaa4ax6l" path="res://Scripts/multi_mesh_instance_3d.gd" id="2_xhbnm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkjhl"]
+resource_name = "SM_Reception_Floor"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_521lk")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8k0ne"]
+_surfaces = [{
+"aabb": AABB(-1.45648, -0.106359, -1.98404, 2.91296, 0.212717, 3.96808),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAADAAIAAQAAAAUABAAFAAAABQAGAAEAAgAHAAQABQAEAAcABwACAAEABwAGAAUAAQAGAAcA"),
+"name": "SM_Reception_Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("2W26v5vS2T0V9f0/4W26v3PS2T0T9f2/2W26P3PS2T0V9f2/4W26P5vS2T0V9f0/4W26P3PS2b0V9f0/2W26v3PS2b0V9f0/4W26v5vS2b0T9f2/2W26P5vS2b0V9f2/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_shxso"]
+resource_name = "Cube_021"
+_surfaces = [{
+"aabb": AABB(-1.45648, -0.106359, -1.98404, 2.91296, 0.212717, 3.96808),
+"attribute_data": PackedByteArray("FbrmPhKzxT7MfP8+ADSDOhO65j4AAIA/BTSDOgA0gzoAAAAA//9/PwU0gzrMfP8+DWoeMw6zxT7MfP8+zHz/PhW6Zj///38/zHz/PppBAD8YuuY+AACAPwU0gzqaQQA/FbrmPhKzxT4FNIM6Zr5/PxW6Zj8Os8U+zHz/Pma+fz8WumY/ELPFPma+Pz80g8A+uCZvPxCzxT6aQSA/NIPAPrgmbz8AAIA/mkEgP2a+Xz8VumY/AACAP2a+Pz9mvl8/XJN3PxKzxT6aQQA/Zr5/P1yTdz8AAIA/Zr5/P2a+fz+5Jm8/AACAP2a+fz+aQWA/uSZvPxKzxT6aQQA/mkFgPwAAgD/2ogw/mkEAPzSDwD7//38/AACAP5pBAD9mvl8/XZN3PwAAgD9mvh8/Zr5fP12Tdz/2ogw/Zr4fPzSDwD4AAIA/9qIMP2a+fz/MfL8+XZN3P/aiDD9mvn8/NIOAPl2Tdz9gL8o9mkEAPzSDgD4AAIA/YC/KPZpBAD/MfL8+"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_wkjhl"),
+"name": "SM_Reception_Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("2W26v5vS2T0V9f0/4W26v3PS2T0T9f2/2W26P3PS2T0V9f2/4W26P5vS2T0V9f0/2W26P5vS2b0V9f2/4W26v5vS2b0T9f2/2W26v3PS2b0V9f0/4W26P3PS2b0V9f0/2W26P3PS2T0V9f2/2W26P5vS2b0V9f2/4W26P3PS2b0V9f0/4W26P5vS2T0V9f0/2W26v3PS2b0V9f0/4W26v5vS2b0T9f2/4W26v3PS2T0T9f2/2W26v5vS2T0V9f0/4W26P3PS2b0V9f0/2W26v3PS2b0V9f0/2W26v5vS2T0V9f0/4W26P5vS2T0V9f0/2W26P5vS2b0V9f2/2W26P3PS2T0V9f2/4W26v3PS2T0T9f2/4W26v5vS2b0T9f2//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7//fwAA////v/9/AAD///+//38AAP///7//fwAA////v////3//fwCA////f/9/AID///9//38AgP///3//fwCAAAD/f/9/AIAAAP9//38AgAAA/3//fwCAAAD/f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgAAA////fwCAAAD///9/AIAAAP///38AgAAA////fwCA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8k0ne")
+
+[sub_resource type="MultiMesh" id="MultiMesh_3dr8p"]
+mesh = SubResource("ArrayMesh_shxso")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_3dr8p")
+script = ExtResource("2_xhbnm")
