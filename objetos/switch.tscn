@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=4 uid="uid://dsuhfbcays4ar"]
+
+[ext_resource type="Texture2D" uid="uid://b88m0b25frwy3" path="res://Assets/House/Textures/Light_switch.png" id="1_03dkf"]
+[ext_resource type="Script" uid="uid://bipvorrqdsgg2" path="res://Scripts/switch.gd" id="1_fsfus"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldaek"]
+resource_name = "Light_switch"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_03dkf")
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wwolb"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.00302477, -0.017382, 0.02, 0.00370858, 0.0347639),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAEAAEAAgAFAAAAAwAAAAUABQACAAYABAADAAcABQAHAAMABwAGAAQABgAHAAUA"),
+"name": "Light_switch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("CdcjvM1BMzqkZI48CdcjvDY7RrukZI48CdcjvDY7RrukZI68CdcjPM1BMzqkZI48CdcjPDY7RrukZI48CdcjvM1BMzqkZI68CdcjPDY7RrukZI68CdcjPM1BMzqkZI68")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0b1si"]
+resource_name = "Light_switch"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.00302477, -0.017382, 0.02, 0.00370858, 0.0347639),
+"attribute_data": PackedByteArray("5qRoP1CG7z240UQ/WIbvPbjRRD83D2I/5qRoPzcPYj/+/38/AIP3uwAAADMAhPe7AAAAM4T3gD/+/38/hPeAP7jRRD9Ihu895qRoP0CG7z3mpGg/Nw9iP7jRRD83D2I/udFEPxlqOD/mpGg/GWo4P+akaD/QK48+udFEP9Arjz650UQ/0CuPPuakaD/QK48+5qRoPxlqOD+50UQ/GWo4Pw=="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_ldaek"),
+"name": "Light_switch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("CdcjvM1BMzqkZI48CdcjvDY7RrukZI48CdcjvDY7RrukZI68CdcjvM1BMzqkZI68CdcjPM1BMzqkZI48CdcjvM1BMzqkZI48CdcjvM1BMzqkZI68CdcjPM1BMzqkZI68CdcjPDY7RrukZI48CdcjPM1BMzqkZI48CdcjPM1BMzqkZI68CdcjPDY7RrukZI68CdcjPDY7RrukZI68CdcjPM1BMzqkZI68CdcjvM1BMzqkZI68CdcjvDY7RrukZI68CdcjvDY7RrukZI48CdcjvM1BMzqkZI48CdcjPM1BMzqkZI48CdcjPDY7RrukZI48AAD/f/9/AAAAAP9//38AAAAA/3//fwAAAAD/f/9/AAD/f////v//P/9////+//8//3///////z//f///////P////3//f///////f/9///////9//3///////3//f/////////9/AAD//////38AAP//////fwAA//////9/AAD/f/9//3////9//3//f////3//f/9/////f/9//3///w==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wwolb")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fsfus"]
+points = PackedVector3Array(0.00999804, 0.000683811, 0.017382, 0.00999804, -0.00302477, 0.017382, 0.00999804, 0.000683811, -0.017382, -0.01, 0.000683811, 0.017382, -0.01, -0.00302477, 0.017382, 0.00999804, -0.00302477, -0.017382, -0.01, 0.000683811, -0.017382, -0.01, -0.00302477, -0.017382)
+
+[node name="light_switch" type="Node3D"]
+script = ExtResource("1_fsfus")
+
+[node name="Light_switch" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.52514, 0, 0, 0, -6.58648e-07, 5.52514, 0, -5.52514, -6.58648e-07, 0, 0, 0)
+mesh = SubResource("ArrayMesh_0b1si")
+skeleton = NodePath("")
+
+[node name="light_switch" type="StaticBody3D" parent="Light_switch"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch/light_switch"]
+shape = SubResource("ConvexPolygonShape3D_fsfus")

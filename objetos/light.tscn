@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnjk2hpqpqk0b"]
+
+[ext_resource type="PackedScene" uid="uid://d0w7fl43aas3e" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Lights/CeilingLight/SM_CeilingLight_L.fbx" id="1_a6rhv"]
+[ext_resource type="Texture2D" uid="uid://du3h4ds6cmuef" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Lights/CeilingLight/M_CeilingLight.png" id="2_sr04d"]
+[ext_resource type="Texture2D" uid="uid://c2prttxgdipwm" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Lights/CeilingLight/M_CeilingLight_Emissive.png" id="3_niy6h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6rhv"]
+albedo_texture = ExtResource("2_sr04d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sr04d"]
+albedo_texture = ExtResource("3_niy6h")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 3.62
+
+[node name="light" type="Node3D"]
+
+[node name="SM_CeilingLight_L" parent="." instance=ExtResource("1_a6rhv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+
+[node name="SM_CeilingLight_L" parent="SM_CeilingLight_L" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_a6rhv")
+surface_material_override/1 = SubResource("StandardMaterial3D_sr04d")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+omni_range = 6.89
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.25, 0)
+visible = false
+spot_range = 10.0
+
+[editable path="SM_CeilingLight_L"]

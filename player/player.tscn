@@ -27,6 +27,6 @@ script = ExtResource("2_rkbax")
 [node name="Camera3D" type="Camera3D" parent="Head"]
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -6.80595e-08, -1, 0, 1.55702, -4.37114e-08, 0, 0, 0)
 target_position = Vector3(0, -1.5, 0)
 script = ExtResource("3_g1dw6")

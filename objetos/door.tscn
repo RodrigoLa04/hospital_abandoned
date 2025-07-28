@@ -239,7 +239,7 @@ _data = {
 &"open": SubResource("Animation_0phs7")
 }
 
-[node name="Door" type="Node3D"]
+[node name="door" type="Node3D"]
 script = ExtResource("1_50cdl")
 
 [node name="hingeR2" type="Node3D" parent="."]
@@ -252,9 +252,9 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_24eas")
 surface_material_override/1 = SubResource("StandardMaterial3D_xg3tq")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="hingeR2/SM_DoubleDoor_DR2"]
+[node name="door" type="StaticBody3D" parent="hingeR2/SM_DoubleDoor_DR2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hingeR2/SM_DoubleDoor_DR2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hingeR2/SM_DoubleDoor_DR2/door"]
 shape = SubResource("ConvexPolygonShape3D_0phs7")
 
 [node name="hingeL" type="Node3D" parent="."]
@@ -267,9 +267,9 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_quvdd")
 surface_material_override/1 = SubResource("StandardMaterial3D_ejk4w")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="hingeL/SM_DoubleDoor_DL2"]
+[node name="door" type="StaticBody3D" parent="hingeL/SM_DoubleDoor_DL2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="hingeL/SM_DoubleDoor_DL2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hingeL/SM_DoubleDoor_DL2/door"]
 shape = SubResource("ConvexPolygonShape3D_50cdl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
