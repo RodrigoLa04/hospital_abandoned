@@ -41,8 +41,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wwolb")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fsfus"]
-points = PackedVector3Array(0.00999804, 0.000683811, 0.017382, 0.00999804, -0.00302477, 0.017382, 0.00999804, 0.000683811, -0.017382, -0.01, 0.000683811, 0.017382, -0.01, -0.00302477, 0.017382, 0.00999804, -0.00302477, -0.017382, -0.01, 0.000683811, -0.017382, -0.01, -0.00302477, -0.017382)
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsfus"]
+size = Vector3(0.140747, 0.0313618, 0.0552444)
 
 [node name="light_switch" type="Node3D"]
 script = ExtResource("1_fsfus")
@@ -52,7 +52,9 @@ transform = Transform3D(5.52514, 0, 0, 0, -6.58648e-07, 5.52514, 0, -5.52514, -6
 mesh = SubResource("ArrayMesh_0b1si")
 skeleton = NodePath("")
 
-[node name="light_switch" type="StaticBody3D" parent="Light_switch"]
+[node name="light_switch" type="StaticBody3D" parent="."]
+transform = Transform3D(5.52514, 0, 0, 0, -6.58648e-07, 5.52514, 0, -5.52514, -6.58648e-07, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Light_switch/light_switch"]
-shape = SubResource("ConvexPolygonShape3D_fsfus")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light_switch"]
+transform = Transform3D(0.681394, 0, 0, 0, 0.681394, 0, 0, 0, 0.681394, -0.00550977, -0.000779245, 0.00549421)
+shape = SubResource("BoxShape3D_fsfus")
