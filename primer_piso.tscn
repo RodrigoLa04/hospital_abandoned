@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=15 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ceeiss4f5o2e3" path="res://objetos/door.tscn" id="8_xx18s"]
 [ext_resource type="PackedScene" uid="uid://bnjk2hpqpqk0b" path="res://objetos/light.tscn" id="9_7mnm2"]
 [ext_resource type="PackedScene" uid="uid://dsuhfbcays4ar" path="res://objetos/switch.tscn" id="10_xcewb"]
+[ext_resource type="PackedScene" uid="uid://boeim81tb71xu" path="res://objetos/estante.tscn" id="11_sm3bc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xcewb"]
 sky_top_color = Color(0.0468183, 8.33865e-06, 0.241701, 1)
@@ -33,7 +34,7 @@ glow_enabled = true
 environment = SubResource("Environment_md345")
 
 [node name="Player" parent="." instance=ExtResource("2_lqpkw")]
-transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -18.2749, 0.809292, -18.3974)
+transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -12.8749, 0.809292, -18.3974)
 
 [node name="FLOOR" type="Node3D" parent="."]
 
@@ -2079,3 +2080,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.9,
 transform = Transform3D(-0.997549, 0, -0.0699653, 0, 1, 0, 0.0699653, 0, -0.997549, -18.4012, 1.42494, -19.9853)
 on = true
 light_ceeling = NodePath("../light1")
+
+[node name="Estante" parent="." instance=ExtResource("11_sm3bc")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -26.1, 0.9, -19.7)

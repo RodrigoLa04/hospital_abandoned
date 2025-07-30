@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7vr7n7ku2xke"]
+[gd_scene load_steps=7 format=3 uid="uid://b7vr7n7ku2xke"]
 
 [ext_resource type="Script" uid="uid://bn05ggds71yju" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://d4aw7lpr063gt" path="res://player/fp_cam.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://bhhbd5sssq17y" path="res://player/interact.gd" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://player_ui.tscn" id="4_yw30f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
-height = 1.4
+height = 1.7
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_oul6g"]
-height = 1.4
+height = 1.7
 
 [node name="Player" type="CharacterBody3D"]
 floor_max_angle = 1.13446
@@ -21,7 +22,7 @@ shape = SubResource("CapsuleShape3D_kqu6x")
 mesh = SubResource("CapsuleMesh_oul6g")
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.413244, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42548, -0.227046)
 script = ExtResource("2_rkbax")
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
@@ -36,3 +37,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.413244, 0)
 shadow_enabled = true
 spot_range = 6.272
 spot_angle = 39.55
+
+[node name="Player_ui" parent="." instance=ExtResource("4_yw30f")]
