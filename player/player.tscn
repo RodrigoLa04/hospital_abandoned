@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bn05ggds71yju" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://d4aw7lpr063gt" path="res://player/fp_cam.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://bhhbd5sssq17y" path="res://player/interact.gd" id="3_g1dw6"]
-[ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://player_ui.tscn" id="4_yw30f"]
+[ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://ui/player_ui.tscn" id="4_yw30f"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 height = 1.7

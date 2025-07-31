@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=16 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bnjk2hpqpqk0b" path="res://objetos/light.tscn" id="9_7mnm2"]
 [ext_resource type="PackedScene" uid="uid://dsuhfbcays4ar" path="res://objetos/switch.tscn" id="10_xcewb"]
 [ext_resource type="PackedScene" uid="uid://boeim81tb71xu" path="res://objetos/estante.tscn" id="11_sm3bc"]
+[ext_resource type="PackedScene" uid="uid://e2fdwnlijm03" path="res://objetos/task_trigger.tscn" id="12_md345"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xcewb"]
 sky_top_color = Color(0.0468183, 8.33865e-06, 0.241701, 1)
@@ -23,6 +24,7 @@ ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
 sky_material = SubResource("ProceduralSkyMaterial_xcewb")
 
 [sub_resource type="Environment" id="Environment_md345"]
+background_mode = 2
 sky = SubResource("Sky_sm3bc")
 tonemap_mode = 2
 glow_enabled = true
@@ -33,7 +35,7 @@ glow_enabled = true
 environment = SubResource("Environment_md345")
 
 [node name="Player" parent="." instance=ExtResource("2_lqpkw")]
-transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -12.8749, 0.809292, -18.3974)
+transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -12.8749, 0.959291, -18.3974)
 
 [node name="FLOOR" type="Node3D" parent="."]
 
@@ -2075,6 +2077,87 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6, 1.2862, -16.9)
 [node name="ParedesConsultorios" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.4, 1.6, -12.7)
 
+[node name="ParedesConsultorios18" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3938, 1.60634, -3.71049)
+
+[node name="ParedesConsultorios19" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3938, 1.60634, -3.71049)
+
+[node name="ParedesConsultorios20" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4938, 1.60634, -3.81049)
+
+[node name="ParedesConsultorios23" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1938, 1.60634, -33.8105)
+
+[node name="ParedesConsultorios25" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5938, 1.60634, -33.8105)
+
+[node name="ParedesConsultorios26" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5938, 1.60634, -42.7105)
+
+[node name="ParedesConsultorios27" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7938, 1.60634, -18.7105)
+
+[node name="ParedesConsultorios24" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1938, 1.60634, -42.6105)
+
+[node name="ParedesConsultorios21" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4938, 1.60634, 5.18951)
+
+[node name="ParedesConsultorios22" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3938, 1.60634, 5.18951)
+
+[node name="ParedesConsultorios28" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.7938, 1.60634, 0.889514)
+
+[node name="ParedesConsultorios29" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.7938, 1.60634, 0.889514)
+
+[node name="ParedesConsultorios30" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -42.7938, 1.60634, 0.889513)
+
+[node name="ParedesConsultorios31" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -51.7938, 1.60634, 0.889513)
+
+[node name="ParedesConsultorios32" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -60.7938, 1.60634, 0.889513)
+
+[node name="ParedesConsultorios33" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -3.51049)
+
+[node name="ParedesConsultorios34" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57.4938, 1.60634, -19.0105)
+
+[node name="ParedesConsultorios35" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57.4938, 1.60634, -28.0105)
+
+[node name="ParedesConsultorios36" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -30.3105)
+
+[node name="ParedesConsultorios37" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -39.3105)
+
+[node name="ParedesConsultorios38" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -56.9938, 1.60634, -38.5105)
+
+[node name="ParedesConsultorios39" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -47.9938, 1.60634, -38.5105)
+
+[node name="ParedesConsultorios40" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -38.9938, 1.60634, -38.5105)
+
+[node name="ParedesConsultorios41" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -29.9938, 1.60634, -38.5105)
+
+[node name="ParedesConsultorios42" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -20.9938, 1.60634, -38.5105)
+
+[node name="ParedesConsultorios43" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -20.3938, 1.60634, -33.7105)
+
+[node name="ParedesConsultorios44" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
+transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -20.3938, 1.60634, -42.7105)
+
 [node name="Door" parent="." instance=ExtResource("8_xx18s")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.4, 1.24451, -18.3)
 
@@ -2092,83 +2175,10 @@ light_ceeling = NodePath("../light1")
 [node name="Estante" parent="." instance=ExtResource("11_sm3bc")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -26.1, 0.9, -19.7)
 
-[node name="ParedesConsultorios" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3938, 1.60634, -3.71049)
+[node name="task_trigger" parent="." instance=ExtResource("12_md345")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4996, 0.8, -19.1)
+task_text = "abre los cajones"
 
-[node name="ParedesConsultorios19" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3938, 1.60634, -3.71049)
-
-[node name="ParedesConsultorios20" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4938, 1.60634, -3.81049)
-
-[node name="ParedesConsultorios23" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1938, 1.60634, -33.8105)
-
-[node name="ParedesConsultorios25" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5938, 1.60634, -33.8105)
-
-[node name="ParedesConsultorios26" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5938, 1.60634, -42.7105)
-
-[node name="ParedesConsultorios27" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7938, 1.60634, -18.7105)
-
-[node name="ParedesConsultorios24" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.1938, 1.60634, -42.6105)
-
-[node name="ParedesConsultorios21" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.4938, 1.60634, 5.18951)
-
-[node name="ParedesConsultorios22" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.3938, 1.60634, 5.18951)
-
-[node name="ParedesConsultorios2" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.7938, 1.60634, 0.889514)
-
-[node name="ParedesConsultorios3" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.7938, 1.60634, 0.889514)
-
-[node name="ParedesConsultorios4" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -42.7938, 1.60634, 0.889513)
-
-[node name="ParedesConsultorios5" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -51.7938, 1.60634, 0.889513)
-
-[node name="ParedesConsultorios6" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -60.7938, 1.60634, 0.889513)
-
-[node name="ParedesConsultorios7" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -3.51049)
-
-[node name="ParedesConsultorios8" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57.4938, 1.60634, -19.0105)
-
-[node name="ParedesConsultorios9" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -57.4938, 1.60634, -28.0105)
-
-[node name="ParedesConsultorios10" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -30.3105)
-
-[node name="ParedesConsultorios11" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -61.3938, 1.60634, -39.3105)
-
-[node name="ParedesConsultorios12" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -56.9938, 1.60634, -38.5105)
-
-[node name="ParedesConsultorios13" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -47.9938, 1.60634, -38.5105)
-
-[node name="ParedesConsultorios14" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -38.9938, 1.60634, -38.5105)
-
-[node name="ParedesConsultorios15" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -29.9938, 1.60634, -38.5105)
-
-[node name="ParedesConsultorios16" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -20.9938, 1.60634, -38.5105)
-
-[node name="ParedesConsultorios17" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -20.3938, 1.60634, -33.7105)
-
-[node name="ParedesConsultorios18" parent="." instance=ExtResource("6_f2t18")]
-transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -20.3938, 1.60634, -42.7105)
+[node name="task_trigger2" parent="." instance=ExtResource("12_md345")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1996, 0.8, -20.2)
+task_text = "segunda prueba"
