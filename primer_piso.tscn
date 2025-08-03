@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=15 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
@@ -12,20 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://dsuhfbcays4ar" path="res://objetos/switch.tscn" id="10_xcewb"]
 [ext_resource type="PackedScene" uid="uid://boeim81tb71xu" path="res://objetos/estante.tscn" id="11_sm3bc"]
 [ext_resource type="PackedScene" uid="uid://e2fdwnlijm03" path="res://objetos/task_trigger.tscn" id="12_md345"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xcewb"]
-sky_top_color = Color(0.0468183, 8.33865e-06, 0.241701, 1)
-sky_horizon_color = Color(0.0370366, 0.0356053, 0.116338, 1)
-sky_curve = 0.504538
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-
-[sub_resource type="Sky" id="Sky_sm3bc"]
-sky_material = SubResource("ProceduralSkyMaterial_xcewb")
+[ext_resource type="PackedScene" uid="uid://cupfhuxtwqqcu" path="res://objetos/single_door.tscn" id="13_xlvgd"]
 
 [sub_resource type="Environment" id="Environment_md345"]
-background_mode = 2
-sky = SubResource("Sky_sm3bc")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -2158,19 +2147,29 @@ transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -20.3938
 [node name="ParedesConsultorios44" parent="paredesRecepcion" instance=ExtResource("6_f2t18")]
 transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -20.3938, 1.60634, -42.7105)
 
-[node name="Door" parent="." instance=ExtResource("8_xx18s")]
+[node name="Doors" type="Node3D" parent="."]
+
+[node name="Door" parent="Doors" instance=ExtResource("8_xx18s")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.4, 1.24451, -18.3)
 
-[node name="light1" parent="." instance=ExtResource("9_7mnm2")]
+[node name="lights" type="Node3D" parent="."]
+
+[node name="light1" parent="lights" instance=ExtResource("9_7mnm2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.6, 2, -18.6)
 
-[node name="light2" parent="." instance=ExtResource("9_7mnm2")]
+[node name="light2" parent="lights" instance=ExtResource("9_7mnm2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.9, 2, -18.6)
+
+[node name="light3" parent="lights" instance=ExtResource("9_7mnm2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.9, 2, -11.6)
+
+[node name="light4" parent="lights" instance=ExtResource("9_7mnm2")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.3, 2, -11.6)
 
 [node name="light_switch1" parent="." node_paths=PackedStringArray("light_ceeling") instance=ExtResource("10_xcewb")]
 transform = Transform3D(-0.997549, 0, -0.0699653, 0, 1, 0, 0.0699653, 0, -0.997549, -18.4012, 1.42494, -19.9853)
 on = true
-light_ceeling = NodePath("../light1")
+light_ceeling = NodePath("../lights/light1")
 
 [node name="Estante" parent="." instance=ExtResource("11_sm3bc")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -26.1, 0.9, -19.7)
@@ -2182,3 +2181,6 @@ task_text = "abre los cajones"
 [node name="task_trigger2" parent="." instance=ExtResource("12_md345")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1996, 0.8, -20.2)
 task_text = "segunda prueba"
+
+[node name="single_door" parent="." instance=ExtResource("13_xlvgd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 1.22784, -17)
