@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=4 uid="uid://bnkyj7nmb1sj7"]
+
+[ext_resource type="Texture2D" uid="uid://c8rsrgn7yylbm" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OfficeRoom_Pieces/OfficeRoom  Doorway/M_OfficeRoom_Doorway.png" id="1_q8nhj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtya2"]
+resource_name = "M_OfficeRoom_Doorway"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yfnqj"]
+_surfaces = [{
+"aabb": AABB(-0.0959046, -1.17986, -1.98288, 0.195115, 3, 3.8555),
+"format": 34359742465,
+"index_count": 162,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAABQAEAAIABgADAAUAAwAGAAEABQAHAAYAAgAHAAUAAQAGAAgACAAGAAcAAAABAAkAAgAEAAoACQALAAAADAAHAAIABwAMAAgACQABAA0ACAANAAEACAAMAA4ADgAPAAgADQAIAA8ADwAQAA0ADgAMABEAAgARAAwAEQASAA4ADQAQABMAFAASABEAEwAVAA0ADQAVAAkAEQACABYACgAWAAIAFgAXABEAEQAXABQAGAAWAAoAFwAWABgACgAZABgAGQAKAAsACwAaABkAGAAZABoAGwAaAAsAGgAbABgACwAJABsAGwAJABUAFQAcABsAGAAbABwAHAAVABMAGAAdABcAHAAdABgAFAAXAB0AEwAeABwAHgATABQAHAAeAB8AFAAfAB4AHwAdABwAHQAfABQA"),
+"name": "M_OfficeRoom_Doorway",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("QOZtvY3ulr+G9U2/QOZtvbj4fD+G9U2/wFtgPbj4fD+H9U2/QOZtvZwFl7/czv2/wFtgPY3ulr+H9U2/wFtgPZwFl7/azv2/QOZtvWT66D/azv2/wFtgPWT66D/azv2/QOZtvWT66D8+su8/oGnEvbj4fD969U2/IC7LPY3ulr989U2/oGnEvY3ulr969U2/wFtgPWT66D8+su8/QOZtvbj4fD/q4Ek/wFtgPZwFl78+su8/QOZtvZwFl788su8/QOZtvY3ulr/q4Ek/wFtgPbj4fD/p4Ek/wFtgPY3ulr/p4Ek/4GjEvY3ulr/24Ek/wC7LPY3ulr/04Ek/4GjEvbj4fD/24Ek/IC7LPbj4fD989U2/wC7LPbj4fD/04Ek/IC7LPUq8az8nAzi/IC7LPY3ulr8nAzi/oGnEvY3ulr8lAzi/oGnEvUq8az8lAzi/4GjEvUq8az9ELTU/wC7LPUq8az9CLTU/4GjEvY3ulr9ELTU/wC7LPY3ulr9CLTU/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sjumh"]
+resource_name = "Cube_473"
+_surfaces = [{
+"aabb": AABB(-0.0959046, -1.17986, -1.98288, 0.195115, 3, 3.8555),
+"attribute_data": PackedByteArray("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"),
+"format": 34359742519,
+"index_count": 162,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwAUABRAFIAUgBTAFAAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAAZABlAGYAZgBnAGQAaABpAGoAagBrAGgA"),
+"material": SubResource("StandardMaterial3D_wtya2"),
+"name": "M_OfficeRoom_Doorway",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 108,
+"vertex_data": PackedByteArray("QOZtvY3ulr+G9U2/QOZtvbj4fD+G9U2/wFtgPbj4fD+H9U2/wFtgPY3ulr+H9U2/oGnEvbj4fD969U2/oGnEvY3ulr969U2/QOZtvY3ulr+G9U2/QOZtvbj4fD+G9U2/wC7LPY3ulr/04Ek/wFtgPY3ulr/p4Ek/wFtgPbj4fD/p4Ek/wC7LPbj4fD/04Ek/4GjEvY3ulr9ELTU/4GjEvY3ulr/24Ek/wC7LPY3ulr/04Ek/wC7LPY3ulr9CLTU/IC7LPY3ulr8nAzi/IC7LPY3ulr989U2/oGnEvY3ulr969U2/oGnEvY3ulr8lAzi/4GjEvUq8az9ELTU/4GjEvY3ulr9ELTU/wC7LPY3ulr9CLTU/wC7LPUq8az9CLTU/4GjEvUq8az9ELTU/4GjEvbj4fD/24Ek/4GjEvY3ulr/24Ek/4GjEvY3ulr9ELTU/oGnEvUq8az8lAzi/oGnEvY3ulr8lAzi/oGnEvY3ulr969U2/oGnEvbj4fD969U2/IC7LPUq8az8nAzi/IC7LPbj4fD989U2/IC7LPY3ulr989U2/IC7LPY3ulr8nAzi/IC7LPUq8az8nAzi/wC7LPUq8az9CLTU/wC7LPbj4fD/04Ek/IC7LPbj4fD989U2/4GjEvbj4fD/24Ek/4GjEvUq8az9ELTU/oGnEvUq8az8lAzi/oGnEvbj4fD969U2/wC7LPUq8az9CLTU/wC7LPY3ulr9CLTU/wC7LPY3ulr/04Ek/wC7LPbj4fD/04Ek/wFtgPbj4fD/p4Ek/wFtgPbj4fD+H9U2/IC7LPbj4fD989U2/wC7LPbj4fD/04Ek/oGnEvbj4fD969U2/QOZtvbj4fD+G9U2/QOZtvbj4fD/q4Ek/4GjEvbj4fD/24Ek/4GjEvY3ulr/24Ek/4GjEvbj4fD/24Ek/QOZtvbj4fD/q4Ek/QOZtvY3ulr/q4Ek/4GjEvUq8az9ELTU/wC7LPUq8az9CLTU/IC7LPUq8az8nAzi/oGnEvUq8az8lAzi/IC7LPY3ulr989U2/IC7LPbj4fD989U2/wFtgPbj4fD+H9U2/wFtgPY3ulr+H9U2/IC7LPUq8az8nAzi/IC7LPY3ulr8nAzi/oGnEvY3ulr8lAzi/oGnEvUq8az8lAzi/wFtgPZwFl78+su8/QOZtvZwFl788su8/QOZtvWT66D8+su8/wFtgPWT66D8+su8/wFtgPZwFl7/azv2/wFtgPWT66D/azv2/QOZtvWT66D/azv2/QOZtvZwFl7/czv2/wFtgPbj4fD+H9U2/wFtgPWT66D/azv2/wFtgPZwFl7/azv2/wFtgPY3ulr+H9U2/QOZtvWT66D8+su8/QOZtvWT66D/azv2/wFtgPWT66D/azv2/wFtgPWT66D8+su8/wFtgPWT66D8+su8/wFtgPWT66D/azv2/wFtgPbj4fD+H9U2/wFtgPbj4fD/p4Ek/wFtgPbj4fD/p4Ek/wFtgPY3ulr/p4Ek/wFtgPZwFl78+su8/wFtgPWT66D8+su8/QOZtvbj4fD+G9U2/QOZtvY3ulr+G9U2/QOZtvZwFl7/czv2/QOZtvWT66D/azv2/QOZtvWT66D8+su8/QOZtvbj4fD/q4Ek/QOZtvbj4fD+G9U2/QOZtvWT66D/azv2/QOZtvbj4fD/q4Ek/QOZtvWT66D8+su8/QOZtvZwFl788su8/QOZtvY3ulr/q4Ek//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/78AAP7/////vwAA/v////+/AAD+/////78AAP7/////v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//38AAP//////fwAA//////9/AAD//////38AAP//////fwAA//////9/AAD//////38AAP//////fwAA/////wAA/v////+/AAD+/////78AAP7/////vwAA/v////+/AAD/fwAAAIAAAP9/AAAAgAAA/38AAACAAAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////////3//f6HE////f/9/tcT///9//38gwP///3//f/+/////f/9//7////9//3//v////3//f/+/////f/9//78AAP9/AAAAgAAA/38AAACAAAD/fwAA/v8AAP9/AAD+//7//3//f/+//v//f/9//7/+//9//3//v/7//3//f/+//3///////7//f///////v/9///////+//3///////7//f////v//v/9////+//+//3////7//7//f////v//vwCA/38AAP+/AID/fwAA/78AgP9/AAD/vwCA/38AAP+//38AAAAA/7//fwAAAAD/v/9/AAAAAP+//38AAAAA/7////7//v//v////v/+//+////+//7//7////7//v//v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7////7//v//v////v/+//+////+//7//7////7//v//v////3//fwCA////f/9/AID///9//38AgP///3//fwCA/3///////7//f///////v/9///////+//3///////7////9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCA////f/9/AID///9//38AgP///3//fwCAAAD/f/9///8AAP9//3///wAA/3//f///AAD/f/9///8AAP9//3///wAA/3//f/7/AAD/f/9///8AAP9//3///wAA/3//f/7/AAD/f/9///8AAP9//3///wAA/3//f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yfnqj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y77ef"]
+albedo_texture = ExtResource("1_q8nhj")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="SM_OfficeRoom_Doorway2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.02, -0.77)
+mesh = SubResource("ArrayMesh_sjumh")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_y77ef")

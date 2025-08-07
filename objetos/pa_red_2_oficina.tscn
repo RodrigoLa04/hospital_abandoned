@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=4 uid="uid://04kvjoo7ilfl"]
+
+[ext_resource type="Texture2D" uid="uid://dik0ay0vmjmdt" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OfficeRoom_Pieces/OfficeRoom  Walls/M_OfficeRoom_Wall_2.png" id="1_0a6jg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcroj"]
+resource_name = "SM_OfficeRoom_Wall_2"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dy7ns"]
+_surfaces = [{
+"aabb": AABB(-0.0451428, -1.5, -1.19574, 0.0902854, 3, 2.39149),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAgAEAAAABAACAAMAAQAFAAMAAwAGAAQAAAAEAAYABwAFAAEAAQAAAAcABgAHAAAA"),
+"name": "SM_OfficeRoom_Wall_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("Uuc4PQAAwD8qDpm/buc4PQAAwD8gDpk/kuc4vQAAwD8gDpk/kuc4vQAAwL8gDpk/ruc4vQAAwD8qDpm/buc4PQAAwL9EDpk/ruc4vQAAwL8qDpm/Uuc4PQAAwL8YDpm/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0n7e1"]
+resource_name = "Cube_471"
+_surfaces = [{
+"aabb": AABB(-0.0451428, -1.5, -1.19574, 0.0902854, 3, 2.39149),
+"attribute_data": PackedByteArray("OG17PwAAgD+aQQA/zHy/Pjltez8z3AY/Zr5/P8x8vz4AAIA/M9wGP2a+fz80g4A+AACAPwAAgD+aQQA/NIOAPqdHcj8AAIA/mkEAP5pBAD+nR3I/kBLQPppBAD9mvn8/b9p2P5AS0D5mvh8/Zr5/P2/adj8AAIA/Zr4fP5pBAD+aR/I+P8uAP8x8/z6aQQA/AAAAAD/LgD8FNIM6mkEAPxTy4zSOP9M+BTSDOma+fz+2R/I+jj/TPsx8/z5mvn8/qUdyPwAAgD8FNIM6ADSDOrhH8j4AAIA/BTSDOsx8/z64R/I+kBLQPsx8/z7MfP8+qUdyP5AS0D7MfP8+ADSDOnDadj+QEtA+mkEAPzSDwD44bXs/kBLQPppBAD/MfP8+OG17PwAAgD9mvn8/zHz/PnDadj8AAIA/Zr5/PzSDwD4="),
+"format": 34359742519,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAA"),
+"material": SubResource("StandardMaterial3D_qcroj"),
+"name": "SM_OfficeRoom_Wall_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("Uuc4PQAAwD8qDpm/buc4PQAAwD8gDpk/kuc4vQAAwD8gDpk/ruc4vQAAwD8qDpm/buc4PQAAwD8gDpk/buc4PQAAwL9EDpk/kuc4vQAAwL8gDpk/kuc4vQAAwD8gDpk/buc4PQAAwD8gDpk/Uuc4PQAAwD8qDpm/Uuc4PQAAwL8YDpm/buc4PQAAwL9EDpk/ruc4vQAAwD8qDpm/kuc4vQAAwD8gDpk/kuc4vQAAwL8gDpk/ruc4vQAAwL8qDpm/ruc4vQAAwL8qDpm/Uuc4PQAAwL8YDpm/Uuc4PQAAwD8qDpm/ruc4vQAAwD8qDpm//3///wAA/7//f///AAD/v/9///8AAP+//3///wAA/7/+f/9/AAD+v/5//38AAP+//n//fwAA/7/+f/9/AAD+v////3//f/+/////f/9//7////9//3//v////3//f/+/AAD/f/////8AAP9//////wAA/3//////AAD/f//////+/wAA/v//v/7/AAD+//+//v8AAP7//7/+/wAA/v//vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dy7ns")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_abvl3"]
+albedo_texture = ExtResource("1_0a6jg")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oauxm"]
+points = PackedVector3Array(-0.0688955, -1.52351, -1.21951, 0.0739336, 1.52351, 1.20906, -0.0688955, 1.52351, 1.20906, 0.0739336, -1.52351, 1.20906, 0.0739336, 1.52351, -1.21951, -0.0688955, 1.52351, -1.21951, -0.0688955, -1.52351, 1.20906, 0.0739336, -1.52351, -1.21951)
+
+[node name="paRED2_oficina" type="Node3D"]
+
+[node name="SM_OfficeRoom_Wall_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47, 0, 0.04)
+mesh = SubResource("ArrayMesh_0n7e1")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_abvl3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_OfficeRoom_Wall_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_OfficeRoom_Wall_2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_oauxm")
