@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://uwt6lii8uho3"]
+
+[ext_resource type="PackedScene" uid="uid://c1odct2olkls4" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PaperPile/SM_PaperPile_2.fbx" id="1_eojwi"]
+[ext_resource type="Texture2D" uid="uid://5ux0pvhoycvg" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PaperPile/M_PaperPile.png" id="2_vuqgy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pspm"]
+albedo_texture = ExtResource("2_vuqgy")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h50tx"]
+points = PackedVector3Array(-0.317582, 0.0332, -0.00406581, -0.0635201, 0.0332, -0.0773436, -0.0781692, 0.0332, -0.0382565, -0.318649, -0.0594016, 0.141247, -0.318649, -0.0594016, -0.139647, -0.0980734, -0.0567, 0.133444, -0.15122, 0.0270407, 0.173634, -0.0980734, -0.0567, -0.131844, -0.264629, 0.0270407, -0.172034, -0.361902, 0.0270407, 0.0980296, -0.0963, 0.0307113, 0.135603, -0.314324, 0.0308, -0.134291, -0.0485481, 0.0270407, -0.0910487, -0.314324, 0.0308, 0.135891, -0.0963, 0.0307113, -0.134003, -0.15639, 0.0332, 0.157087, -0.258941, 0.0332, -0.155487, -0.0963, -0.0315152, -0.1392, -0.346902, 0.0332, 0.0887212, -0.361902, 0.0270407, 0.0818191, -0.0963, 0.00996001, 0.1408, -0.248401, 0.0270407, -0.172034, -0.162018, 0.0270407, 0.173634, -0.0485481, 0.0270407, -0.0856, -0.0963, -0.021135, -0.1392, -0.0963, 0.0203311, 0.1408, -0.244268, 0.0332, -0.155487, -0.346902, 0.0332, 0.0740625, -0.0684032, 0.0332, -0.0871384, -0.166154, 0.0332, 0.157087, -0.151508, 0.0332, 0.152222)
+
+[node name="papeles2" type="Node3D"]
+
+[node name="SM_PaperPile_2" parent="." instance=ExtResource("1_eojwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0, -0.5)
+
+[node name="SM_PaperPile_2" parent="SM_PaperPile_2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5pspm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_PaperPile_2/SM_PaperPile_2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_PaperPile_2/SM_PaperPile_2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_h50tx")
+
+[editable path="SM_PaperPile_2"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=4 uid="uid://ogugujg08xxt"]
+
+[ext_resource type="Texture2D" uid="uid://2mrbo48uglcx" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/NewContent_v1.1/Materials/Web/M_Web.png" id="1_pimpi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t168x"]
+resource_name = "M_Cobweb"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dpbcb"]
+_surfaces = [{
+"aabb": AABB(-1.52394, -0.595799, -0.81836, 2.03794, 0.953278, 1.41335),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "M_Cobweb",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("rpUDP4kHtz4HgFG/bBDDv4kHtz71UBg/NoAAP0iGGL8P6hc/8goCPwwK9L34db2+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lc3j3"]
+resource_name = "Plane_001"
+_surfaces = [{
+"aabb": AABB(-1.52394, -0.595799, -0.81836, 2.03794, 0.953278, 1.41335),
+"attribute_data": PackedByteArray("Vmn3vfC9fj4FNIM6ADSDOqoffD+IKH0/BTSDOma+fz8MvCg/UGKuPWa+fz9mvn8/rv8iPhC5jD1mvn8/ADSDOg=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_t168x"),
+"name": "M_Cobweb",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("rpUDP4kHtz4HgFG/bBDDv4kHtz71UBg/NoAAP0iGGL8P6hc/8goCPwwK9L34db2+NDnkH45uelM0OeQfhm0ZUzQ55B8KbkpTNDnkH397Plg=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dpbcb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_841is"]
+albedo_texture = ExtResource("1_pimpi")
+
+[node name="telaraña" type="Node3D"]
+
+[node name="SM_Cobweb" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048793, 0, 0.00814654)
+mesh = SubResource("ArrayMesh_lc3j3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_841is")

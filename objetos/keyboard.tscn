@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=4 uid="uid://mp68le8nfgao"]
+
+[ext_resource type="Texture2D" uid="uid://bc4s1bxle4q84" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PC/Keyboard/M_Keyboard.png" id="1_ufu2p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h43fi"]
+resource_name = "M_Keyboard"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s5ao5"]
+_surfaces = [{
+"aabb": AABB(-0.234566, -0.0143049, -0.0850493, 0.469135, 0.0359824, 0.170099),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgABAAMAAgAEAAAAAwAFAAIABgAEAAIAAgAFAAYABQADAAcAAAAHAAMABwAGAAUABwAAAAQABAAGAAcA"),
+"name": "M_Keyboard",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AjNwPgBfarxGLq49AjNwPgCVsTxGLq49/jJwPgAp4ztaLq69/jFwvgCVsTxaLq49/jJwPgBfarxaLq69AjJwvgAp4ztGLq69AjJwvgBfarxGLq69/jFwvgBfarxaLq49")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p06sl"]
+resource_name = "Cube_234"
+_surfaces = [{
+"aabb": AABB(-0.234566, -0.0143049, -0.0850493, 0.469135, 0.0359824, 0.170099),
+"attribute_data": PackedByteArray("YTZZPwguIz8RaSo/3i2rPvLYbD8ILiM/mkEAP94tqz4gzWQ/AACAP5pBAD8QaSo/YTZZPwAAgD8RaSo/EGkqPw/9OT8AAIA/3y2rPrsTVT8P/Tk/AAAAAGa+fz+7E1U/oZ9NPwAAAABmvn8/ROwqP6CfTT8AAIA/3y2rPkTsKj80QmE/CC4jP98tqz7eLas+YTZZPx64jD7fLas+EGkqP/PYbD8euIw+zHz/PhBpKj/z2Gw/CC4jP8x8/z7eLas+oZ9NPwAAgD/fLas+Zr5/P6KfTT8AAAAAZr5/P2a+fz9hNlk/AAAAAGa+fz/vllU/YDZZPwAAgD/fLas+75ZVPytWuj4AAIA/BTSDOt4tqz4sVro+AAAAAAU0gzpmvn8/Dv05PwAAAAB3J6o+Zr5/Pw39OT8AAIA/dyeqPt4tqz4qVro+AACAPxFpKj92J6o+1GuIsgAAgD8RaSo/ADSDOogO7zIAAAAABTSDOgA0gzorVro+AAAAAAU0gzp2J6o+"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_h43fi"),
+"name": "M_Keyboard",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AjNwPgBfarxGLq49AjNwPgCVsTxGLq49/jJwPgAp4ztaLq69/jJwPgBfarxaLq69/jFwvgCVsTxaLq49AjNwPgCVsTxGLq49AjNwPgBfarxGLq49/jFwvgBfarxaLq49AjJwvgAp4ztGLq69/jFwvgCVsTxaLq49/jFwvgBfarxaLq49AjJwvgBfarxGLq69/jJwPgAp4ztaLq69AjJwvgAp4ztGLq69AjJwvgBfarxGLq69/jJwPgBfarxaLq69/jJwPgBfarxaLq69AjJwvgBfarxGLq69/jFwvgBfarxaLq49AjNwPgBfarxGLq49/jJwPgAp4ztaLq69AjNwPgCVsTxGLq49/jFwvgCVsTxaLq49AjJwvgAp4ztGLq69////f/9///////9//3///////3//f///////f/9/////f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgAAA/3//fwCAAAD+//9/AIAAAP7//38AgAAA/v//fwCAAAD+//9/AID/fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v8l1//81CgCAyXX//zUKAIDJdf//NQoAgMl1//81CgCA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s5ao5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdvi6"]
+albedo_texture = ExtResource("1_ufu2p")
+
+[node name="SM_Keyboard" type="Node3D"]
+
+[node name="SM_Keyboard" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_p06sl")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_bdvi6")

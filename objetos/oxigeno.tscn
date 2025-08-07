@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjidvyjcfgthd"]
+
+[ext_resource type="PackedScene" uid="uid://cvtx3x70pyl6u" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/OxygenTank/SM_OxygenTank.fbx" id="1_a82o7"]
+[ext_resource type="Texture2D" uid="uid://bhsudkhqxsbl5" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OxygenTank/M_OxygenTank.png" id="2_1adsc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjrj4"]
+albedo_texture = ExtResource("2_1adsc")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_evop8"]
+points = PackedVector3Array(0.0515535, -0.00135579, 0.141976, 0.00703136, -0.00495651, 0.139857, -0.122605, 0.154873, -0.169259, 0.138446, -0.726194, -0.0386999, -0.0410301, -0.726194, 0.140767, 0.0731681, 0.220194, -0.00608413, 0.128159, -0.706143, 0.0996184, -0.155259, 0.105908, -0.120255, 0.13788, -0.0204631, 0.00840388, -0.00837603, 0.220194, 0.0755032, -0.00837603, -0.742447, -0.0713156, -0.061915, -0.0337545, 0.0898304, -0.0736539, -0.726194, 0.108087, 0.125728, -0.00109972, 0.097617, 0.101122, -0.0368052, -0.0465995, -0.155259, 0.105908, -0.169259, -0.0899809, -0.726194, 0.0265316, 0.0894952, -0.726194, -0.0713156, -0.122605, 0.236447, -0.103931, 0.0839469, -0.72753, 0.131687, -0.00837603, -0.726194, 0.15709, -0.0573268, -0.742447, -0.0386999, 0.101262, -0.752852, 0.087583, 0.1429, -0.704958, 0.054151, -0.0573268, 0.252803, -0.103931, 0.0685247, 0.190263, 0.0703426, 0.0952028, -0.00336279, 0.126101, 0.140208, -0.00172532, 0.0530182, -0.0573268, 0.269159, -0.0386999, -0.0351192, -0.0298436, 0.119485, -0.0736539, -0.742447, 0.0917631, 0.122119, -0.726194, -0.0549918)
+
+[node name="oxigeno" type="Node3D"]
+
+[node name="SM_OxygenTank" parent="." instance=ExtResource("1_a82o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -0.3)
+
+[node name="SM_OxygenTank" parent="SM_OxygenTank" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_xjrj4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_OxygenTank/SM_OxygenTank" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_OxygenTank/SM_OxygenTank/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_evop8")
+
+[editable path="SM_OxygenTank"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnaatxnaje6gj"]
+
+[ext_resource type="PackedScene" uid="uid://bny3rmrp26he7" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/NewContent_v1.1/Mesh/Boards/SM_WoodenBoard.fbx" id="1_qtbvq"]
+[ext_resource type="Texture2D" uid="uid://8yo0r7xi3q3j" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/NewContent_v1.1/Materials/Boards/M_WoodenBoards.png" id="2_o8qdl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48ufq"]
+albedo_texture = ExtResource("2_o8qdl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gkc5n"]
+points = PackedVector3Array(0.0301519, 0.12203, 1.00741, -0.0291074, -0.115007, -1.00741, 0.0301519, -0.115007, -1.00741, -0.0291074, -0.115007, 1.00741, -0.0291074, 0.12203, -1.00741, 0.0301519, 0.12203, -1.00741, 0.0301519, -0.115007, 1.00741, -0.0291074, 0.12203, 1.00741)
+
+[node name="tablas" type="Node3D"]
+
+[node name="SM_WoodenBoard" parent="." instance=ExtResource("1_qtbvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0893139, 0, 0.163488)
+
+[node name="SM_WoodenBoard" parent="SM_WoodenBoard" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_48ufq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_WoodenBoard/SM_WoodenBoard" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_WoodenBoard/SM_WoodenBoard/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_gkc5n")
+
+[editable path="SM_WoodenBoard"]

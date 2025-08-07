@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4sk48ag2px4q"]
+
+[ext_resource type="PackedScene" uid="uid://d2orase7x6tld" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/NewContent_v1.1/Mesh/Boards/SM_WoodenBoards.fbx" id="1_mkqvh"]
+[ext_resource type="Texture2D" uid="uid://8yo0r7xi3q3j" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/NewContent_v1.1/Materials/Boards/M_WoodenBoards.png" id="2_6tscl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6xwe"]
+albedo_texture = ExtResource("2_6tscl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hs2la"]
+points = PackedVector3Array(0.0271214, 0.797867, 0.943705, -0.0379738, -0.959574, -1.00885, -0.0379738, -0.471191, -1.04167, -0.0379738, 0.504993, 1.04137, 0.0271214, -0.861819, 1.00855, 0.0271214, 1.02583, -1.00885, 0.0271214, -0.959574, -1.00885, -0.0379738, 1.02583, -1.00885, -0.0379738, -0.861819, 1.00855, -0.0379738, 0.797867, 0.943705, 0.0271214, 0.504993, 1.04137, 0.0271214, -0.894469, 0.780585, 0.0271214, -0.243421, -1.04167, -0.0379738, -0.959574, -0.618376, -0.0379738, 0.765412, 1.00855, -0.0379738, -0.894469, 0.780585, 0.0271214, -0.959574, -0.618376, 0.0271214, 0.993181, -0.683421, 0.0271214, 0.244573, 1.04137, 0.0271214, 0.765412, 1.00855, -0.0379738, 0.993181, -0.683421, -0.0379738, 0.244573, 1.04137, 0.0271214, -0.471191, -1.04167, -0.0379738, -0.243421, -1.04167, 0.0271214, 1.02583, -0.976426, -0.0379738, 1.02583, -0.976426)
+
+[node name="tablas" type="Node3D"]
+
+[node name="SM_WoodenBoards" parent="." instance=ExtResource("1_mkqvh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27157, -1.19209e-07, -0.345865)
+
+[node name="SM_WoodenBoards" parent="SM_WoodenBoards" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q6xwe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_WoodenBoards/SM_WoodenBoards" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_WoodenBoards/SM_WoodenBoards/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_hs2la")
+
+[editable path="SM_WoodenBoards"]
