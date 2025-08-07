@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=4 uid="uid://cisr00uablssv"]
+
+[ext_resource type="Texture2D" uid="uid://d3h0c2a1wybt0" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OfficeRoom_Pieces/OfficeRoom Ceiling/M_OfficeRoom_Ceiling.png" id="1_xak7i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2bfe6"]
+resource_name = "M_OfficeRoom_Ceiling"
+vertex_color_use_as_albedo = true
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_physb"]
+_surfaces = [{
+"aabb": AABB(-1.13407, -0.128803, -0.85585, 2.49496, 0.202405, 1.88287),
+"format": 34359742465,
+"index_count": 54,
+"index_data": PackedByteArray("AAAAAAEAAQABAAAAAQABAAIAAgABAAAAAAABAAMAAwABAAIAAgAEAAMABQADAAQAAwAFAAAABAAGAAUABgAEAAIAAAAFAAYAAgAHAAYAAAAHAAIABgAHAAAABwAHAAYAAAAAAAcABwAHAAAA"),
+"name": "M_OfficeRoom_Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("SimRv2u8lj3mGFu/SimRv368lj1ddYM/izGuP368lj1YdYM/SimRv+HkA75ddYM/izGuP+HkA75YdYM/SimRv+rkA77mGFu/izGuP+rkA770GFu/izGuP2u8lj30GFu/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f43yy"]
+resource_name = "Cube_290"
+_surfaces = [{
+"aabb": AABB(-1.13407, -0.128803, -0.85585, 2.49496, 0.202405, 1.88287),
+"attribute_data": PackedByteArray("AAAAALLh2z6aQQk/Zr53PwAAAACy4ds+Zr4JP2a+dz8AAAAAsuHbPma+CT80g/A+AAAAALLh2z6aQQk/NIPwPgEAgD+IMA4+mkEAP8x87z4BAIA/EMYRP2a+fz/MfO8+oyZ0PxDGET9mvn8/NIPgPqMmdD+IMA4+mkEAPzSD4D4AAAAAsuHbPppBCD9mvnc/AAAAALLh2z5mvgg/Zr53PwAAAACy4ds+Zr4IPzSD8D4AAAAAsuHbPppBCD80g/A+oiZ0PwAAgD9mvn8/Zr5/P0NNaD8AAIA/Zr5/P5pBeD9ETWg/tOHbPppBAD+aQXg/oyZ0P7Th2z6aQQA/Zr5/P91z3D4AAIA/zHz/PppBAD8AAAAAAACAPwU0gzqaQQA/8SEtNLLh2z4FNIM6Zr5/P+Rz3D604ds+zHz/Pma+fz/oc9w+AACAP8x8/z4ANIM65HPcPrLh2z4FNIM6ADSDOuBzXD+04ds+BTSDOsx8/z7jc1w/AACAP8x8/z7MfP8+oyZ0PxDGET9mvgc/Zr53PwEAgD8QxhE/mkEAP2a+dz+iJnQ/AACAP2a+Bz80g/A+AQCAPwAAgD+aQQA/NIPwPkJNaD8AAIA/Zr5/P8x83z7jc1w/AACAP61BAD/MfN8+43NcP7Th2z6aQQA/NIPQPkJNaD+04ds+WL5/PzSD0D4="),
+"format": 34359742519,
+"index_count": 54,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAYABkAGgAYABkAGQAbABoAHAAdAB4AHQAdAB4AHgAfABwA"),
+"material": SubResource("StandardMaterial3D_2bfe6"),
+"name": "M_OfficeRoom_Ceiling",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("SimRv2u8lj3mGFu/SimRv2u8lj3mGFu/SimRv368lj1ddYM/SimRv368lj1ddYM/SimRv+HkA75ddYM/SimRv+rkA77mGFu/SimRv2u8lj3mGFu/SimRv368lj1ddYM/izGuP2u8lj30GFu/izGuP2u8lj30GFu/SimRv2u8lj3mGFu/SimRv2u8lj3mGFu/izGuP+rkA770GFu/izGuP2u8lj30GFu/SimRv2u8lj3mGFu/SimRv+rkA77mGFu/SimRv+rkA77mGFu/SimRv+HkA75ddYM/izGuP+HkA75YdYM/izGuP+rkA770GFu/izGuP368lj1YdYM/SimRv368lj1ddYM/SimRv2u8lj3mGFu/izGuP2u8lj30GFu/izGuP2u8lj30GFu/izGuP+rkA770GFu/izGuP368lj1YdYM/izGuP+HkA75YdYM/SimRv+HkA75ddYM/SimRv368lj1ddYM/izGuP368lj1YdYM/izGuP+HkA75YdYM/8awpDf///7//f///////vzVH/v////+//3///////78AAP9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgAAA/f////+//3///////7//f///////v/GsKQ3///+/AAD+//9/AIAAAP7//38AgAAA/v//fwCAAAD+//9/AID/fwAA//8AgP9/AAD//wCA/38AAP//AID/fwAA//8AgP9///8AAACANUf+/8k4AID/f///AAAAgP9///8AAACA////f/9/AID///9//38AgP///3//fwCA////f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgA==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_physb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lvxtq"]
+albedo_texture = ExtResource("1_xak7i")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1d4vq"]
+points = PackedVector3Array(1.38045, 0.0890175, 1.06495, -1.15365, -0.148602, -0.875602, -1.15365, 0.0890175, -0.875602, 1.38045, -0.148602, -0.875602, -1.15365, -0.148602, 1.06495, -1.15365, 0.0890175, 1.06495, 1.38045, 0.0890175, -0.875602, 1.38045, -0.148602, 1.06495)
+
+[node name="techo_oficina" type="Node3D"]
+
+[node name="SM_OfficeRoom_Ceiling2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.54, 0, -0.67)
+mesh = SubResource("ArrayMesh_f43yy")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lvxtq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_OfficeRoom_Ceiling2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_OfficeRoom_Ceiling2/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1d4vq")
