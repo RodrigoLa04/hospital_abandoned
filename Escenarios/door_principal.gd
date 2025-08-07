@@ -1,6 +1,7 @@
 extends Node3D
 
 var opened = false
+@export var locked = false
 
 func toggle_door():
 	if $AnimationPlayer.current_animation != "open" and $AnimationPlayer.current_animation != "close":

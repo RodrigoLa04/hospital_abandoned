@@ -1,6 +1,6 @@
 extends Node3D
 
-
+@export var locked = false
 
 var opened = false
 

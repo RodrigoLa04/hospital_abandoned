@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=16 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dsuhfbcays4ar" path="res://objetos/switch.tscn" id="10_xcewb"]
 [ext_resource type="PackedScene" uid="uid://boeim81tb71xu" path="res://objetos/estante.tscn" id="11_sm3bc"]
 [ext_resource type="PackedScene" uid="uid://e2fdwnlijm03" path="res://objetos/task_trigger.tscn" id="12_md345"]
+[ext_resource type="PackedScene" uid="uid://bcqf3tfq0vktn" path="res://key.tscn" id="12_phhhi"]
 [ext_resource type="PackedScene" uid="uid://cupfhuxtwqqcu" path="res://objetos/single_door.tscn" id="13_xlvgd"]
 
 [sub_resource type="Environment" id="Environment_md345"]
@@ -24,7 +25,7 @@ glow_enabled = true
 environment = SubResource("Environment_md345")
 
 [node name="Player" parent="." instance=ExtResource("2_lqpkw")]
-transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -12.8749, 0.959291, -18.3974)
+transform = Transform3D(0.00176007, -0.00369599, 0.999992, 0.00222954, 0.999991, 0.00369206, -0.999996, 0.00222303, 0.0017684, -21.855, 0.959291, -18.3974)
 
 [node name="FLOOR" type="Node3D" parent="."]
 
@@ -2174,13 +2175,21 @@ light_ceeling = NodePath("../lights/light1")
 [node name="Estante" parent="." instance=ExtResource("11_sm3bc")]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -26.1, 0.9, -19.7)
 
+[node name="cajon" parent="Estante" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0138397)
+
+[node name="key" parent="Estante/cajon" index="2" instance=ExtResource("12_phhhi")]
+transform = Transform3D(-2.18489e-08, 0.499878, -0.0110471, 6.14616e-10, -0.0110471, -0.499878, -0.5, -2.18571e-08, -1.31734e-10, 0.164829, -0.0753911, -0.1)
+
 [node name="task_trigger" parent="." instance=ExtResource("12_md345")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4996, 0.8, -19.1)
 task_text = "abre los cajones"
 
-[node name="task_trigger2" parent="." instance=ExtResource("12_md345")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1996, 0.8, -20.2)
-task_text = "segunda prueba"
-
 [node name="single_door" parent="." instance=ExtResource("13_xlvgd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.5, 1.22784, -17)
+locked = true
+
+[node name="key" parent="." instance=ExtResource("12_phhhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.326, 0.695442, -13.4199)
+
+[editable path="Estante"]
