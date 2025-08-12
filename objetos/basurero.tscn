@@ -48,7 +48,6 @@ points = PackedVector3Array(0.215576, -0.560711, -0.22577, 0.229876, 0.324403, 0
 [node name="Node3D" type="Node3D"]
 
 [node name="SM_PeddleBin" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.352254, 1.19209e-07, -0.358357)
 
 [node name="SM_PeddleBin" type="MeshInstance3D" parent="SM_PeddleBin"]
 mesh = SubResource("ArrayMesh_0cvhq")

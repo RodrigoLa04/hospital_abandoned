@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bu5pw6g5exvvl" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Doorway/M_Reception_Doorway_Green.png" id="11_l75dr"]
 [ext_resource type="Texture2D" uid="uid://2mye42bmw2pr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Doorway/M_Reception_Entrance.png" id="12_5xdxh"]
 [ext_resource type="Texture2D" uid="uid://sgngglgfvgh1" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Hallways_Pieces/Floor/M_Hallway_Floor.png" id="13_ngiwc"]
-[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png" id="14_2f8u5"]
+[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/ReceptionSign/M_Reception_Floor.png" id="14_2f8u5"]
 [ext_resource type="Texture2D" uid="uid://b3tw3xdt4fwfx" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception wall/M_Reception_Wall.png" id="15_m35k3"]
 [ext_resource type="Texture2D" uid="uid://fj2lkmkiyr8p" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception wall/M_Reception_Wall_Sign.png" id="16_lxywo"]
 [ext_resource type="Texture2D" uid="uid://b0p5xp16oh3up" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/StorageRoom_Pieces/StorageRoom Ceiling/M_StorageRoom_Ceiling.png" id="17_p113o"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cas7u7ki2cm2m" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Doorways/M_MorgueRoom_Doorway_L.png" id="25_ah4mj"]
 [ext_resource type="Texture2D" uid="uid://b00fg72xm4o7u" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Doorways/M_MorgueRoom_Doorway_S.png" id="26_die0g"]
 [ext_resource type="Texture2D" uid="uid://d1wrc1ibw6imr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/MorgueRoom_Pieces/MorgueRoom Floor/M_MorgueRoom_Floor.png" id="27_lk3by"]
+
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mm3s"]
 albedo_texture = ExtResource("1_wcj1x")

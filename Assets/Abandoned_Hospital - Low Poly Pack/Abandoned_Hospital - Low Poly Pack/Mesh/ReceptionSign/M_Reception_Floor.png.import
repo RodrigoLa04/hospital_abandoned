@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://coecutni0e6sb"
-path.s3tc="res://.godot/imported/M_Reception_Floor.png-ff8314935cf07a60fe1e22bd1c6248c3.s3tc.ctex"
+path.s3tc="res://.godot/imported/M_Reception_Floor.png-0f08c467492d685f6b55950fa9800d64.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png"
-dest_files=["res://.godot/imported/M_Reception_Floor.png-ff8314935cf07a60fe1e22bd1c6248c3.s3tc.ctex"]
+source_file="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/ReceptionSign/M_Reception_Floor.png"
+dest_files=["res://.godot/imported/M_Reception_Floor.png-0f08c467492d685f6b55950fa9800d64.s3tc.ctex"]
 
 [params]
 

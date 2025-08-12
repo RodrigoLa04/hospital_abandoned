@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8mi1kae14fuk"]
 
 [ext_resource type="PackedScene" uid="uid://6ho36gfi542f" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/Reception_Pieces/Reception Floor/SM_Reception_Floor.fbx" id="1_p88b3"]
-[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png" id="2_l1deq"]
+[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/ReceptionSign/M_Reception_Floor.png" id="2_l1deq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x134o"]
 albedo_texture = ExtResource("2_l1deq")

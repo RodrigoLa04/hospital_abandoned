@@ -1,6 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://bnkyj7nmb1sj7"]
+[gd_scene load_steps=8 format=4 uid="uid://bnkyj7nmb1sj7"]
 
 [ext_resource type="Texture2D" uid="uid://c8rsrgn7yylbm" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OfficeRoom_Pieces/OfficeRoom  Doorway/M_OfficeRoom_Doorway.png" id="1_q8nhj"]
+[ext_resource type="Texture2D" uid="uid://bi81o4voradlr" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/OfficeRoom_Pieces/OfficeRoom  Floor/SM_OfficeRoom_Floor.png" id="1_y77ef"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cc4eu"]
+albedo_texture = ExtResource("1_y77ef")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtya2"]
 resource_name = "M_OfficeRoom_Doorway"
@@ -46,6 +50,7 @@ albedo_texture = ExtResource("1_q8nhj")
 
 [node name="SM_OfficeRoom_Doorway2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.02, -0.77)
+material_override = SubResource("StandardMaterial3D_cc4eu")
 mesh = SubResource("ArrayMesh_sjumh")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_y77ef")

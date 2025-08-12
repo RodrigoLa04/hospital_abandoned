@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://2ke0jngtyi72"
-path="res://.godot/imported/SM_MorgueUnits_DR_High_S.fbx-f743f3a29bd2c651410f39db8890efcf.scn"
+uid="uid://cnvdfgs2kp2o3"
+path="res://.godot/imported/SM_MorgueUnits_D_High_L.fbx-c5c2dec80130d2b492e998b304d8d12b.scn"
 
 [deps]
 
-source_file="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/MorgueUnits/MorgueUnits_High/Doors/SM_MorgueUnits_DR_High_S.fbx"
-dest_files=["res://.godot/imported/SM_MorgueUnits_DR_High_S.fbx-f743f3a29bd2c651410f39db8890efcf.scn"]
+source_file="res://Escenarios/Doors/SM_MorgueUnits_D_High_L.fbx"
+dest_files=["res://.godot/imported/SM_MorgueUnits_D_High_L.fbx-c5c2dec80130d2b492e998b304d8d12b.scn"]
 
 [params]
 

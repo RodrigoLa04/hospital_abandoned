@@ -48,7 +48,6 @@ points = PackedVector3Array(-0.266347, 0.597746, 0.599275, -0.348969, -0.387474,
 [node name="carrito" type="Node3D"]
 
 [node name="SM_LaundryCart" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46905, 0, 0.568528)
 
 [node name="SM_LaundryCart" type="MeshInstance3D" parent="SM_LaundryCart"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73058e-07, -3.86251e-09, 5.24657e-08)

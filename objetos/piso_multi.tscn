@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://cmi5pkdi77gj2"]
 
-[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Reception_Pieces/Reception Floor/M_Reception_Floor.png" id="1_521lk"]
+[ext_resource type="Texture2D" uid="uid://coecutni0e6sb" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/ReceptionSign/M_Reception_Floor.png" id="1_521lk"]
 [ext_resource type="Script" uid="uid://b20kvgaa4ax6l" path="res://Scripts/multi_mesh_instance_3d.gd" id="2_xhbnm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkjhl"]
