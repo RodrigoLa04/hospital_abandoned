@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dtp70p4c0knyk"]
+[gd_scene load_steps=17 format=3 uid="uid://dtp70p4c0knyk"]
 
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_lqpkw"]
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="2_y0gpt"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://e2fdwnlijm03" path="res://objetos/task_trigger.tscn" id="12_md345"]
 [ext_resource type="PackedScene" uid="uid://bcqf3tfq0vktn" path="res://key.tscn" id="12_phhhi"]
 [ext_resource type="PackedScene" uid="uid://cupfhuxtwqqcu" path="res://objetos/single_door.tscn" id="13_xlvgd"]
+[ext_resource type="PackedScene" uid="uid://b1oi2j7obqhww" path="res://objetos/sillas.tscn" id="15_1hvm0"]
 
 [sub_resource type="Environment" id="Environment_md345"]
 tonemap_mode = 2
@@ -2173,7 +2174,7 @@ on = true
 light_ceeling = NodePath("../lights/light1")
 
 [node name="Estante" parent="." instance=ExtResource("11_sm3bc")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -26.1, 0.9, -19.7)
+transform = Transform3D(-0.00310671, 0, 0.999995, 0, 1, 0, -0.999995, 0, -0.00310671, -27.0187, 0.9, -19.9)
 
 [node name="cajon" parent="Estante" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0138397)
@@ -2191,5 +2192,11 @@ locked = true
 
 [node name="key" parent="." instance=ExtResource("12_phhhi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.326, 0.695442, -13.4199)
+
+[node name="Node3D" parent="." instance=ExtResource("15_1hvm0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.8, 0.6, -15)
+
+[node name="Node3D2" parent="." instance=ExtResource("15_1hvm0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0.6, -8.8)
 
 [editable path="Estante"]
