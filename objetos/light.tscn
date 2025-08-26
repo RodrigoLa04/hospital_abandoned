@@ -89,7 +89,8 @@ surface_material_override/1 = SubResource("StandardMaterial3D_sr04d")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
-light_color = Color(0.611765, 0.137255, 0, 1)
+light_color = Color(1, 0.907008, 0.883539, 1)
+light_energy = 0.354
 omni_range = 6.89
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
