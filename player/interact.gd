@@ -1,5 +1,4 @@
 extends RayCast3D
-
 @onready var crosshair = get_parent().get_parent().get_node("Player_ui/CanvasLayer/crosshair")
 
 func _physics_process(delta: float) -> void:
@@ -13,16 +12,17 @@ func _physics_process(delta: float) -> void:
 		elif hit.name == "door":
 			if !crosshair.visible:
 				crosshair.visible = true
-			#print("esta interactuando")
 			if Input.is_action_just_pressed("interact"):
 				hit.get_parent().get_parent().get_parent().toggle_door()
-				
 		elif hit.name == "drawer":
 			if !crosshair.visible:
 				crosshair.visible = true
 			if Input.is_action_just_pressed("interact"):
 				hit.get_parent().get_parent().toggle_door()
-
+		elif hit.is_in_group("interactable"):  # ← NUEVA LÍNEA
+			if !crosshair.visible:
+				crosshair.visible = true
+			# No manejamos el input aquí, eso lo hace el Player
 		else: 
 			if crosshair.visible:
 				crosshair.visible = false

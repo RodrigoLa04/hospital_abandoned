@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://7d5665pdwblh"]
+[gd_scene load_steps=7 format=4 uid="uid://7d5665pdwblh"]
 
 [ext_resource type="Texture2D" uid="uid://c3olspwpc7lsl" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/WaitingChair/M_WaitingChair.png" id="1_ew6gi"]
 
@@ -42,6 +42,9 @@ shadow_mesh = SubResource("ArrayMesh_wthud")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh73p"]
 albedo_texture = ExtResource("1_ew6gi")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ew6gi"]
+points = PackedVector3Array(1.07475, 0.535239, 0.169565, 1.07615, 0.521612, 0.267822, 1.19582, 0.229835, 0.287039, 1.19582, 0.229835, -0.360484, -0.570151, 0.535239, 0.169565, -1.07177, 0.521612, 0.267822, 1.19582, 0.171063, 0.287039, -1.19659, 0.229835, 0.287039, 1.19582, 0.171063, -0.360484, 1.12509, 0.0407254, -0.385295, -1.19659, 0.229835, -0.360484, -1.07317, 0.535134, 0.169565, 1.17896, -0.527434, 0.287039, -1.19659, 0.171063, 0.287039, 1.17896, -0.527434, -0.332185, 1.12509, -0.0919007, -0.385295, -1.11954, 0.0407254, -0.385295, -1.19659, 0.171063, -0.360484, -1.17996, -0.527434, 0.287039, -1.17996, -0.527434, -0.332185, -1.11954, -0.0919007, -0.385295)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="SM_WaitingChair_Row_3" type="Node3D" parent="."]
@@ -51,3 +54,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245232, 1.19209e-07, -0.15
 mesh = SubResource("ArrayMesh_6o2ps")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_lh73p")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_WaitingChair_Row_3/SM_WaitingChair_Row_3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_WaitingChair_Row_3/SM_WaitingChair_Row_3/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_ew6gi")

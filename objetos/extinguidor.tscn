@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://crhpjuy1iu84p"]
+[gd_scene load_steps=8 format=4 uid="uid://crhpjuy1iu84p"]
 
 [ext_resource type="Texture2D" uid="uid://catdhuoi510g6" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/FireExtinguisher/M_FireExtinguisher.png" id="1_0f1q0"]
+[ext_resource type="Script" uid="uid://c5u7uf1qyayfr" path="res://Scripts/InteractableObject.gd" id="1_cq176"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1gmkr"]
 resource_name = "M_FireExtinguisher"
@@ -42,9 +43,19 @@ shadow_mesh = SubResource("ArrayMesh_j4hop")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cq176"]
 albedo_texture = ExtResource("1_0f1q0")
 
-[node name="extinguidor" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_cq176"]
+size = Vector3(0.15, 0.4, 0.25)
+
+[node name="extinguidor" type="StaticBody3D"]
+script = ExtResource("1_cq176")
+object_name = "Extintor"
+description = "Un extintor rojo en perfecto estado. Parece estar lleno y listo para usar en caso de emergencia."
 
 [node name="SM_FireExtinguisher2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_xcukc")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_cq176")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.125, -1.49012e-08, 0.27)
+shape = SubResource("BoxShape3D_cq176")

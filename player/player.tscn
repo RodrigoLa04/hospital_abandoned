@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7vr7n7ku2xke"]
+[gd_scene load_steps=9 format=3 uid="uid://b7vr7n7ku2xke"]
 
 [ext_resource type="Script" uid="uid://bn05ggds71yju" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://d4aw7lpr063gt" path="res://player/fp_cam.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://bhhbd5sssq17y" path="res://player/interact.gd" id="3_g1dw6"]
 [ext_resource type="Script" uid="uid://8x0lopq3waa2" path="res://player/fov.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://ui/player_ui.tscn" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://px6cfr0p0lgp" path="res://Scripts/interaction_ui.gd" id="6_g6k8r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 height = 1.7
@@ -41,3 +42,63 @@ spot_range = 6.272
 spot_angle = 39.55
 
 [node name="Player_ui" parent="." instance=ExtResource("4_yw30f")]
+
+[node name="InteractionUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+script = ExtResource("6_g6k8r")
+metadata/_edit_use_anchors_ = true
+
+[node name="PromptLabel" type="Label" parent="InteractionUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[node name="DescriptionPanel" type="Panel" parent="InteractionUI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DescriptionText" type="RichTextLabel" parent="InteractionUI/DescriptionPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -402.0
+offset_top = -123.0
+offset_right = 402.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="InstructionLabel" type="Label" parent="InteractionUI/DescriptionPanel"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 18.0
+offset_right = 105.0
+offset_bottom = 41.0
+text = "Presiona \"E\" para salir"
+horizontal_alignment = 1
+vertical_alignment = 2
