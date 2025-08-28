@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://w5ruyoj2rcfr"]
+
+[ext_resource type="Script" uid="uid://c5u7uf1qyayfr" path="res://Scripts/InteractableObject.gd" id="1_h1sed"]
+[ext_resource type="PackedScene" uid="uid://bmghdhbtjxqjl" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Mesh/PC/Monitor/SM_Monitor.fbx" id="1_u5fyx"]
+[ext_resource type="Texture2D" uid="uid://jn3cbki4uvvs" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PC/Monitor/M_Monitor.png" id="2_h1sed"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwytc"]
+albedo_texture = ExtResource("2_h1sed")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qyl0g"]
+points = PackedVector3Array(0.10422, 0.210875, 0.187522, -0.104251, 0.210875, 0.187522, 0.10422, 0.00238045, 0.187522, 0.165408, 0.272055, -0.0255993, -0.104251, 0.00238045, 0.187522, -0.165439, 0.272055, -0.0255993, 0.0912701, -0.0831699, 0.161978, 0.165408, -0.0587993, -0.0255993, 0.175001, 0.281647, -0.0661252, -0.165439, -0.0587993, -0.0255993, -0.0913006, -0.0831699, 0.161978, -0.174997, 0.281647, -0.0661252, 1.87755e-06, -0.116704, 0.11461, 0.0899682, -0.116704, 0.0787507, 0.116554, -0.116704, 0.0255582, 0.175001, -0.0683916, -0.0661252, 0.174967, 0.281647, -0.170896, -0.174997, -0.0683916, -0.0661252, -0.116584, -0.116704, 0.0255582, -0.0899987, -0.116704, 0.0787507, -0.174997, 0.281647, -0.170896, 0.102473, -0.116704, -0.0276694, 0.174967, -0.0683916, -0.170896, -0.174997, -0.0683916, -0.170896, -0.102504, -0.116704, -0.0276694, 1.87755e-06, -0.116704, -0.0635287)
+
+[node name="monitor" type="StaticBody3D"]
+script = ExtResource("1_h1sed")
+
+[node name="SM_Monitor" parent="." instance=ExtResource("1_u5fyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+
+[node name="SM_Monitor" parent="SM_Monitor" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_jwytc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+shape = SubResource("ConvexPolygonShape3D_qyl0g")
+
+[editable path="SM_Monitor"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dd56cmab4lhfw"]
+[gd_scene load_steps=34 format=3 uid="uid://dd56cmab4lhfw"]
 
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="1_ub52s"]
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_ldcie"]
@@ -20,9 +20,17 @@
 [ext_resource type="Script" uid="uid://dibxvjw8mtvee" path="res://Scripts/audio_trigger.gd" id="23_nnirs"]
 [ext_resource type="PackedScene" uid="uid://mp68le8nfgao" path="res://objetos/keyboard.tscn" id="23_ouvtg"]
 [ext_resource type="PackedScene" uid="uid://dawg4b841j7u8" path="res://objetos/silla.tscn" id="23_rvb7b"]
+[ext_resource type="PackedScene" uid="uid://drh4hmqwht3qy" path="res://objetos/papeles.tscn" id="24_nnirs"]
 [ext_resource type="PackedScene" uid="uid://cksy3nmogxkb8" path="res://objetos/telefono.tscn" id="24_nuhr1"]
 [ext_resource type="AudioStream" uid="uid://85pi8x21voqa" path="res://Assets/audios/voz-pasilo.MP3" id="24_tn38t"]
 [ext_resource type="AudioStream" uid="uid://g80l5303mixw" path="res://Assets/audios/recepcion-audio.MP3" id="25_rvb7b"]
+[ext_resource type="AudioStream" uid="uid://b22fonagqbqdu" path="res://Assets/audios/paper-rustle-81855.mp3" id="25_tn38t"]
+[ext_resource type="PackedScene" uid="uid://fg4vak5qpko5" path="res://objetos/clipboard.tscn" id="26_nuhr1"]
+[ext_resource type="PackedScene" uid="uid://uwt6lii8uho3" path="res://objetos/papeles_2.tscn" id="27_qk1ou"]
+[ext_resource type="PackedScene" uid="uid://w5ruyoj2rcfr" path="res://objetos/monitor.tscn" id="28_qk1ou"]
+[ext_resource type="Script" uid="uid://c5cy0jm12cxjk" path="res://Scripts/NoteObject.gd" id="28_wlvwq"]
+[ext_resource type="PackedScene" uid="uid://dofqp5mgx7k8s" path="res://objetos/llave.tscn" id="30_qv6pt"]
+[ext_resource type="AudioStream" uid="uid://dhcdk0rlcrkjw" path="res://Assets/audios/key-get-39925.mp3" id="31_of555"]
 
 [sub_resource type="Environment" id="Environment_jqupo"]
 background_mode = 2
@@ -372,12 +380,19 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.3
 
 [node name="door" parent="Paredes y Techos" instance=ExtResource("6_p2alo")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.95, 1.25, 53.65)
+door_type = 1
+required_key_id = "llave_oficina"
 
 [node name="Player" parent="." instance=ExtResource("2_ldcie")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.24884, 0.956338, 41.4885)
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 11.4488, 0.956338, 49.8885)
 
 [node name="door" parent="." instance=ExtResource("6_p2alo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.358418, 1.27863, 22.19)
+door_type = 2
+
+[node name="door2" parent="." instance=ExtResource("6_p2alo")]
+transform = Transform3D(-1, 0, -1.63913e-07, 0, 1, 0, 1.63913e-07, 0, -1, -0.041582, 1.24451, 36.29)
+permanently_locked_message = "Esta puerta está soldada y no se puede abrir"
 
 [node name="objetos" type="Node3D" parent="."]
 
@@ -549,3 +564,29 @@ volume_db = -0.135
 
 [node name="SM_Keyboard" parent="." instance=ExtResource("23_ouvtg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68396, 0.982592, 50.1352)
+
+[node name="papeles" parent="." instance=ExtResource("24_nnirs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 1.20729, 49.45)
+note_title = "Diario Personal"
+note_content = "Prueba"
+paper_sound = ExtResource("25_tn38t")
+
+[node name="clipboard" parent="." instance=ExtResource("26_nuhr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 1.16459, 49.5)
+
+[node name="papeles2" parent="." instance=ExtResource("27_qk1ou")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15, 1.20729, 49.55)
+script = ExtResource("28_wlvwq")
+note_title = "Nota 2"
+
+[node name="Node3D" parent="." instance=ExtResource("28_qk1ou")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.7, 1.26459, 49.5)
+object_name = "Computadora"
+description = "Un poco vieja
+"
+
+[node name="llave" parent="." instance=ExtResource("30_qv6pt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70396, 0.356379, 52.1861)
+key_id = "llave_oficina"
+key_name = "Llave de la oficina"
+pickup_sound = ExtResource("31_of555")

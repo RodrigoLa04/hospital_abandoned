@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dofqp5mgx7k8s"]
+
+[ext_resource type="Script" uid="uid://c08wx7a6oaoa6" path="res://Scripts/keyObject.gd" id="1_m0ic2"]
+[ext_resource type="PackedScene" uid="uid://yb1cvf2gbkni" path="res://Assets/key/key.glb" id="2_mpdkj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iby7l"]
+size = Vector3(0.45, 0.7, 0.4)
+
+[node name="llave" type="StaticBody3D"]
+script = ExtResource("1_m0ic2")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_mpdkj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.35, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.075, -2.98023e-08, -0.05)
+shape = SubResource("BoxShape3D_iby7l")
+
+[editable path="Sketchfab_Scene"]

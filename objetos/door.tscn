@@ -1,9 +1,12 @@
-[gd_scene load_steps=23 format=4 uid="uid://ceeiss4f5o2e3"]
+[gd_scene load_steps=24 format=4 uid="uid://ceeiss4f5o2e3"]
 
-[ext_resource type="Script" uid="uid://mod1fb3yfunn" path="res://Scripts/door.gd" id="1_50cdl"]
+[ext_resource type="Script" uid="uid://c2ci8mtdwogid" path="res://Scripts/DoorObject.gd" id="1_btyx3"]
 [ext_resource type="Texture2D" uid="uid://cw6awowetpnw2" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Doors/Double Doors/M_DoubleDoor_DR.png" id="2_4xadh"]
 [ext_resource type="Texture2D" uid="uid://c0rl86gq78s3o" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Doors/Double Doors/M_DoubleDoor_Glass.png" id="3_6hwww"]
 [ext_resource type="Texture2D" uid="uid://osvjdqc8mbbm" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Doors/Double Doors/M_DoubleDoor_DL.png" id="5_ptf7r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0vh73"]
+size = Vector3(1.88574, 2.13327, 0.0828857)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmrxo"]
 resource_name = "M_DoubleDoor_DR"
@@ -239,8 +242,12 @@ _data = {
 &"open": SubResource("Animation_0phs7")
 }
 
-[node name="door" type="Node3D"]
-script = ExtResource("1_50cdl")
+[node name="door" type="StaticBody3D"]
+script = ExtResource("1_btyx3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367676, -0.0564728, -0.00286865)
+shape = SubResource("BoxShape3D_0vh73")
 
 [node name="hingeR2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.543159, 0, 0)
