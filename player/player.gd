@@ -28,7 +28,7 @@ func handle_movement(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-	# Handle jump (lo dejé comentado como lo tenías)
+	# Handle jump 
 	#if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		#velocity.y = JUMP_VELOCITY
 		
@@ -43,7 +43,7 @@ func handle_movement(delta: float) -> void:
 	
 	move_and_slide()
 
-# ===== NUEVAS FUNCIONES PARA INTERACCIÓN =====
+
 
 func check_for_interactables():
 	if raycast.is_colliding():

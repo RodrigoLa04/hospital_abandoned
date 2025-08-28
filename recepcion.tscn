@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dd56cmab4lhfw"]
+[gd_scene load_steps=26 format=3 uid="uid://dd56cmab4lhfw"]
 
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="1_ub52s"]
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_ldcie"]
@@ -7,9 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://d2panjwf6x4ed" path="res://objetos/doorway.tscn" id="5_gcytf"]
 [ext_resource type="PackedScene" uid="uid://ceeiss4f5o2e3" path="res://objetos/door.tscn" id="6_p2alo"]
 [ext_resource type="PackedScene" uid="uid://dbbvbu8dbdkek" path="res://objetos/basurero.tscn" id="7_ulwc7"]
-[ext_resource type="PackedScene" uid="uid://dgqm2fqto38cv" path="res://objetos/carrito.tscn" id="8_2cil5"]
-[ext_resource type="PackedScene" uid="uid://drjx1iibqky7o" path="res://objetos/estante2.tscn" id="9_ffqs0"]
-[ext_resource type="PackedScene" uid="uid://s83asqbj6brg" path="res://objetos/examination_table.tscn" id="10_gk800"]
 [ext_resource type="PackedScene" uid="uid://bui0wgfchl7mi" path="res://objetos/exit.tscn" id="11_caa4d"]
 [ext_resource type="PackedScene" uid="uid://crhpjuy1iu84p" path="res://objetos/extinguidor.tscn" id="12_8qiyc"]
 [ext_resource type="PackedScene" uid="uid://d2ak405i05wiq" path="res://objetos/fireAlarm.tscn" id="13_jqupo"]
@@ -21,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://byjxck5odd7pi" path="res://objetos/maquinita.tscn" id="19_ouvtg"]
 [ext_resource type="PackedScene" uid="uid://b3e8fvgnq2wau" path="res://objetos/recepcion.tscn" id="22_rvb7b"]
 [ext_resource type="Script" uid="uid://dibxvjw8mtvee" path="res://Scripts/audio_trigger.gd" id="23_nnirs"]
+[ext_resource type="PackedScene" uid="uid://mp68le8nfgao" path="res://objetos/keyboard.tscn" id="23_ouvtg"]
 [ext_resource type="PackedScene" uid="uid://dawg4b841j7u8" path="res://objetos/silla.tscn" id="23_rvb7b"]
 [ext_resource type="PackedScene" uid="uid://cksy3nmogxkb8" path="res://objetos/telefono.tscn" id="24_nuhr1"]
 [ext_resource type="AudioStream" uid="uid://85pi8x21voqa" path="res://Assets/audios/voz-pasilo.MP3" id="24_tn38t"]
@@ -376,7 +374,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.3
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.95, 1.25, 53.65)
 
 [node name="Player" parent="." instance=ExtResource("2_ldcie")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.956338, 23.58)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.24884, 0.956338, 41.4885)
 
 [node name="door" parent="." instance=ExtResource("6_p2alo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.358418, 1.27863, 22.19)
@@ -389,32 +387,11 @@ transform = Transform3D(-0.0203665, 0, 0.999793, 0, 1, 0, -0.999793, 0, -0.02036
 [node name="Node3D3" parent="objetos" instance=ExtResource("7_ulwc7")]
 transform = Transform3D(-0.0203665, 0, 0.999793, 0, 1, 0, -0.999793, 0, -0.0203665, -1.66068, 0.668203, 22.4587)
 
-[node name="carrito" parent="objetos" instance=ExtResource("8_2cil5")]
-transform = Transform3D(0.561997, 0, -0.827139, 0, 1, 0, 0.827139, 0, 0.561997, 1.15283, 0.499656, 28.1539)
-
-[node name="carrito2" parent="objetos" instance=ExtResource("8_2cil5")]
-transform = Transform3D(0.999105, 0, 0.0422941, 0, 1, 0, -0.0422941, 0, 0.999105, -1.23126, 0.499656, 31.1303)
-
-[node name="Node3D" parent="objetos" instance=ExtResource("9_ffqs0")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.890582, -0.192547, 26.2147)
-
-[node name="examination_table" parent="objetos" instance=ExtResource("10_gk800")]
-transform = Transform3D(0.962522, 0, 0.271205, 0, 1, 0, -0.271205, 0, 0.962522, 1.51251, 0.527959, 24.8962)
-
-[node name="examination_table2" parent="objetos" instance=ExtResource("10_gk800")]
-transform = Transform3D(0.798047, 0, 0.602595, 0, 1, 0, -0.602595, 0, 0.798047, -0.805395, 0.527959, 33.0399)
-
 [node name="Node3D4" parent="objetos" instance=ExtResource("11_caa4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316379, 2.78964, 25.707)
 
 [node name="Node3D5" parent="objetos" instance=ExtResource("11_caa4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.316379, 2.78964, 32.4131)
-
-[node name="extinguidor" parent="objetos" instance=ExtResource("12_8qiyc")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.48801, 0.16685, 29.1884)
-
-[node name="extinguidor2" parent="objetos" instance=ExtResource("12_8qiyc")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.11528, 0.26685, 26.8585)
 
 [node name="Node3D6" parent="objetos" instance=ExtResource("13_jqupo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.95055, 1.80099, 26.684)
@@ -486,16 +463,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5398, 0.686426, 43.7903)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7898, 0.686426, 43.7903)
 
 [node name="clock" parent="objetos" instance=ExtResource("18_tkmbw")]
-transform = Transform3D(0.112579, 0, -0.993643, 0, 1, 0, 0.993643, 0, 0.112579, 3.95409, 2.26707, 53.7303)
+transform = Transform3D(0.112579, 0, -0.993643, 0, 1, 0, 0.993643, 0, 0.112579, 3.95409, 2.04402, 53.5082)
 
 [node name="extinguidor3" parent="objetos" instance=ExtResource("12_8qiyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.84611, 1.95917, 41.2679)
+description = ""
 
 [node name="Node3D16" parent="objetos" instance=ExtResource("19_ouvtg")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.8009, 0.727242, 41.5007)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.2463, 0.727242, 41.5007)
+description = "Una máquina expendidora, raro que nadie haya robado nada..."
 
 [node name="Node3D32" parent="objetos" instance=ExtResource("19_ouvtg")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -0.8991, 0.727242, 53.8007)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -0.8991, 0.727242, 52.9002)
 
 [node name="Node3D17" parent="objetos" instance=ExtResource("22_rvb7b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.63536, 0.796887, 50.9887)
@@ -543,7 +522,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56997, 2.51997, 39.963)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08524, 2.51997, 44.2043)
 
 [node name="AudioTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23326, 0, 21.8)
 script = ExtResource("23_nnirs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AudioTrigger"]
@@ -556,7 +535,7 @@ stream = ExtResource("24_tn38t")
 volume_db = -0.135
 
 [node name="AudioTrigger2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21804, 0, 30.75)
 script = ExtResource("23_nnirs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AudioTrigger2"]
@@ -567,3 +546,6 @@ shape = SubResource("BoxShape3D_rvb7b")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.6)
 stream = ExtResource("25_rvb7b")
 volume_db = -0.135
+
+[node name="SM_Keyboard" parent="." instance=ExtResource("23_ouvtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68396, 0.982592, 50.1352)

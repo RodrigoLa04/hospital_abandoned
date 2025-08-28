@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://byjxck5odd7pi"]
+[gd_scene load_steps=8 format=4 uid="uid://byjxck5odd7pi"]
 
+[ext_resource type="Script" uid="uid://c5u7uf1qyayfr" path="res://Scripts/InteractableObject.gd" id="1_3kxyd"]
 [ext_resource type="Texture2D" uid="uid://t053orsw4nac" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/VendingMachine/M_VendingMachine.png" id="1_p7vex"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4dv6"]
@@ -45,17 +46,15 @@ albedo_texture = ExtResource("1_p7vex")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jokgb"]
 points = PackedVector3Array(0.644315, 1.41184, 0.6136, -0.809324, -0.546334, -0.4925, -0.719636, -0.620904, -0.4657, 0.663863, 1.43904, -0.4925, -0.789775, 1.41184, 0.6136, 0.587698, -0.592459, 0.5869, -0.809324, 1.43904, -0.4925, 0.663863, -0.546334, -0.4925, -0.789775, -0.520844, 0.6136, 0.644315, -0.520844, 0.6136, -0.701858, -0.592459, 0.5869, 0.5927, -0.600083, -0.454964)
 
-[node name="Node3D" type="Node3D"]
+[node name="Maquina" type="StaticBody3D"]
+script = ExtResource("1_3kxyd")
+object_name = "Maquina Expendidora"
+description = "Raro que nadie haya robado nada..."
 
-[node name="SM_VendingMachine" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.174325, 0, -0.918832)
-
-[node name="SM_VendingMachine" type="MeshInstance3D" parent="SM_VendingMachine"]
+[node name="SM_VendingMachine2" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_qg25e")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_3kxyd")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_VendingMachine/SM_VendingMachine"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_VendingMachine/SM_VendingMachine/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_jokgb")

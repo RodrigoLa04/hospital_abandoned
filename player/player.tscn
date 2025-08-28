@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7vr7n7ku2xke"]
+[gd_scene load_steps=10 format=3 uid="uid://b7vr7n7ku2xke"]
 
 [ext_resource type="Script" uid="uid://bn05ggds71yju" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://d4aw7lpr063gt" path="res://player/fp_cam.gd" id="2_rkbax"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://8x0lopq3waa2" path="res://player/fov.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://ui/player_ui.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://px6cfr0p0lgp" path="res://Scripts/interaction_ui.gd" id="6_g6k8r"]
+[ext_resource type="FontFile" uid="uid://qfu4da2wqtsr" path="res://Assets/reactor7/Reactor7.ttf" id="7_boad6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 height = 1.7
@@ -37,6 +38,7 @@ script = ExtResource("3_g1dw6")
 
 [node name="flashlight" type="SpotLight3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.413244, 0)
+visible = false
 shadow_enabled = true
 spot_range = 6.272
 spot_angle = 39.55
@@ -51,13 +53,13 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -20.0
-offset_top = -40.0
+offset_top = -69.0
 offset_right = 20.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 0
 script = ExtResource("6_g6k8r")
-metadata/_edit_use_anchors_ = true
 
 [node name="PromptLabel" type="Label" parent="InteractionUI"]
 layout_mode = 1
@@ -74,11 +76,19 @@ grow_horizontal = 2
 grow_vertical = 0
 horizontal_alignment = 1
 
-[node name="DescriptionPanel" type="Panel" parent="InteractionUI"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="DescriptionPanel" type="Control" parent="InteractionUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -35.0
+offset_right = 20.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="DescriptionText" type="RichTextLabel" parent="InteractionUI/DescriptionPanel"]
 layout_mode = 1
@@ -92,13 +102,25 @@ offset_top = -123.0
 offset_right = 402.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/normal_font = ExtResource("7_boad6")
+theme_override_font_sizes/normal_font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="InstructionLabel" type="Label" parent="InteractionUI/DescriptionPanel"]
-layout_mode = 0
-offset_left = -67.0
-offset_top = 18.0
-offset_right = 105.0
-offset_bottom = 41.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -23.0
+offset_right = 86.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_boad6")
+theme_override_font_sizes/font_size = 25
 text = "Presiona \"E\" para salir"
 horizontal_alignment = 1
-vertical_alignment = 2
+vertical_alignment = 1
