@@ -14,6 +14,11 @@ enum DoorType {
 @export var permanently_locked_message: String = "Esta puerta parece estar sellada permanentemente"
 @export var interaction_key: String = "E"
 
+@export var door_open_sound: AudioStream
+@export var door_close_sound: AudioStream
+@export var door_locked_sound: AudioStream
+@onready var audio_player = AudioStreamPlayer3D.new()
+
 @onready var animation_player = $AnimationPlayer
 var opened = false
 
@@ -21,6 +26,7 @@ signal door_interacted(door_data)
 
 func _ready():
 	add_to_group("interactable")
+	add_child(audio_player)
 
 func interact():
 	var door_data = {
@@ -45,11 +51,24 @@ func toggle_door():
 		opened = !opened
 		if !opened:
 			animation_player.play_backwards("open")
+			# Sonido de cerrar
+			if door_close_sound:
+				audio_player.stream = door_close_sound
+				audio_player.play()
 		if opened:
 			animation_player.play("open")
+			# Sonido de abrir
+			if door_open_sound:
+				audio_player.stream = door_open_sound
+				audio_player.play()
 
 func highlight():
 	print("Puerta destacada")
 
 func unhighlight():
 	print("Puerta no destacada")
+	
+func play_locked_sound():
+	if door_locked_sound:
+		audio_player.stream = door_locked_sound
+		audio_player.play()

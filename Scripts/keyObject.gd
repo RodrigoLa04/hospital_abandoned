@@ -16,17 +16,18 @@ func interact():
 	print("Recogiendo llave: " + key_name)
 	
 	# Reproducir sonido de recogida
-	if pickup_sound:
-		var audio_player = AudioStreamPlayer3D.new()
-		add_child(audio_player)
-		audio_player.stream = pickup_sound
-		audio_player.play()
-		audio_player.finished.connect(func(): audio_player.queue_free())
+	#if pickup_sound:
+		#var audio_player = AudioStreamPlayer3D.new()
+		#add_child(audio_player)
+		#audio_player.stream = pickup_sound
+		#audio_player.play()
+		#audio_player.finished.connect(func(): audio_player.queue_free())
 	
 	# Emitir señal con datos de la llave
 	var key_data = {
 		"id": key_id,
-		"name": key_name
+		"name": key_name,
+		"sound": pickup_sound
 	}
 	key_collected.emit(key_data)
 

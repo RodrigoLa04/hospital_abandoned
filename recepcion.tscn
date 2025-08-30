@@ -1,11 +1,13 @@
-[gd_scene load_steps=34 format=3 uid="uid://dd56cmab4lhfw"]
+[gd_scene load_steps=38 format=3 uid="uid://dd56cmab4lhfw"]
 
 [ext_resource type="PackedScene" uid="uid://c8mi1kae14fuk" path="res://objetos/floor_recepcion.tscn" id="1_ub52s"]
 [ext_resource type="PackedScene" uid="uid://b7vr7n7ku2xke" path="res://player/player.tscn" id="2_ldcie"]
 [ext_resource type="PackedScene" uid="uid://dxacq6t6q7f23" path="res://objetos/wall_recepcion.tscn" id="3_ldcie"]
 [ext_resource type="PackedScene" uid="uid://blq1snu6mjuyc" path="res://objetos/ceeling_recepcion.tscn" id="4_qisbd"]
 [ext_resource type="PackedScene" uid="uid://d2panjwf6x4ed" path="res://objetos/doorway.tscn" id="5_gcytf"]
+[ext_resource type="AudioStream" uid="uid://k88pjx64ghgd" path="res://Assets/audios/slide-door-sound-221389.mp3" id="6_of555"]
 [ext_resource type="PackedScene" uid="uid://ceeiss4f5o2e3" path="res://objetos/door.tscn" id="6_p2alo"]
+[ext_resource type="AudioStream" uid="uid://dbiugdiadeygs" path="res://Assets/audios/door-lock-98655.mp3" id="7_t0ywj"]
 [ext_resource type="PackedScene" uid="uid://dbbvbu8dbdkek" path="res://objetos/basurero.tscn" id="7_ulwc7"]
 [ext_resource type="PackedScene" uid="uid://bui0wgfchl7mi" path="res://objetos/exit.tscn" id="11_caa4d"]
 [ext_resource type="PackedScene" uid="uid://crhpjuy1iu84p" path="res://objetos/extinguidor.tscn" id="12_8qiyc"]
@@ -17,13 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://flst4wsf8vvx" path="res://objetos/clock.tscn" id="18_tkmbw"]
 [ext_resource type="PackedScene" uid="uid://byjxck5odd7pi" path="res://objetos/maquinita.tscn" id="19_ouvtg"]
 [ext_resource type="PackedScene" uid="uid://b3e8fvgnq2wau" path="res://objetos/recepcion.tscn" id="22_rvb7b"]
+[ext_resource type="AudioStream" uid="uid://c0ll6uxdpehy3" path="res://Assets/audios/demo1.MP3" id="23_2k2dt"]
 [ext_resource type="Script" uid="uid://dibxvjw8mtvee" path="res://Scripts/audio_trigger.gd" id="23_nnirs"]
 [ext_resource type="PackedScene" uid="uid://mp68le8nfgao" path="res://objetos/keyboard.tscn" id="23_ouvtg"]
 [ext_resource type="PackedScene" uid="uid://dawg4b841j7u8" path="res://objetos/silla.tscn" id="23_rvb7b"]
+[ext_resource type="AudioStream" uid="uid://864qidt4sf3i" path="res://Assets/audios/demo2.MP3" id="24_kyp1d"]
 [ext_resource type="PackedScene" uid="uid://drh4hmqwht3qy" path="res://objetos/papeles.tscn" id="24_nnirs"]
 [ext_resource type="PackedScene" uid="uid://cksy3nmogxkb8" path="res://objetos/telefono.tscn" id="24_nuhr1"]
-[ext_resource type="AudioStream" uid="uid://85pi8x21voqa" path="res://Assets/audios/voz-pasilo.MP3" id="24_tn38t"]
-[ext_resource type="AudioStream" uid="uid://g80l5303mixw" path="res://Assets/audios/recepcion-audio.MP3" id="25_rvb7b"]
 [ext_resource type="AudioStream" uid="uid://b22fonagqbqdu" path="res://Assets/audios/paper-rustle-81855.mp3" id="25_tn38t"]
 [ext_resource type="PackedScene" uid="uid://fg4vak5qpko5" path="res://objetos/clipboard.tscn" id="26_nuhr1"]
 [ext_resource type="PackedScene" uid="uid://uwt6lii8uho3" path="res://objetos/papeles_2.tscn" id="27_qk1ou"]
@@ -31,6 +33,8 @@
 [ext_resource type="Script" uid="uid://c5cy0jm12cxjk" path="res://Scripts/NoteObject.gd" id="28_wlvwq"]
 [ext_resource type="PackedScene" uid="uid://dofqp5mgx7k8s" path="res://objetos/llave.tscn" id="30_qv6pt"]
 [ext_resource type="AudioStream" uid="uid://dhcdk0rlcrkjw" path="res://Assets/audios/key-get-39925.mp3" id="31_of555"]
+[ext_resource type="PackedScene" uid="uid://bkqmqa6k6a045" path="res://objetos/newspaper.tscn" id="34_bppq5"]
+[ext_resource type="AudioStream" uid="uid://bjcshhr5qhxnm" path="res://Assets/audios/Rain Indoor Cabin loop SOUND Effect.mp3" id="35_2k2dt"]
 
 [sub_resource type="Environment" id="Environment_jqupo"]
 background_mode = 2
@@ -379,20 +383,20 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.889
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.30973, 22.1953)
 
 [node name="door" parent="Paredes y Techos" instance=ExtResource("6_p2alo")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.95, 1.25, 53.65)
+transform = Transform3D(0.99981, 0, -0.0195116, 0, 1, 0, 0.0195116, 0, 0.99981, 12.6867, 1.25, 53.65)
 door_type = 1
 required_key_id = "llave_oficina"
+door_open_sound = ExtResource("6_of555")
+door_close_sound = ExtResource("6_of555")
+door_locked_sound = ExtResource("7_t0ywj")
 
 [node name="Player" parent="." instance=ExtResource("2_ldcie")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 11.4488, 0.956338, 49.8885)
+transform = Transform3D(-0.999872, 0, 0.016004, 0, 1, 0, -0.016004, 0, -0.999872, -0.259587, 0.956338, 23.8859)
 
 [node name="door" parent="." instance=ExtResource("6_p2alo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.358418, 1.27863, 22.19)
 door_type = 2
-
-[node name="door2" parent="." instance=ExtResource("6_p2alo")]
-transform = Transform3D(-1, 0, -1.63913e-07, 0, 1, 0, 1.63913e-07, 0, -1, -0.041582, 1.24451, 36.29)
-permanently_locked_message = "Esta puerta está soldada y no se puede abrir"
+door_locked_sound = ExtResource("7_t0ywj")
 
 [node name="objetos" type="Node3D" parent="."]
 
@@ -430,7 +434,7 @@ transform = Transform3D(-0.0037351, 0, 0.999993, 0, 1, 0, -0.999993, 0, -0.00373
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.05774, 0.633772, 45.7764)
 
 [node name="Node3D27" parent="objetos" instance=ExtResource("16_4lnet")]
-transform = Transform3D(-0.0037351, 0, 0.999993, 0, 1, 0, -0.999993, 0, -0.0037351, 9.63512, 0.633772, 41.703)
+transform = Transform3D(-0.0037351, 0, 0.999993, 0, 1, 0, -0.999993, 0, -0.0037351, 9.59953, 0.633772, 41.6968)
 
 [node name="Node3D28" parent="objetos" instance=ExtResource("16_4lnet")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.2866, 0.633772, 41.9987)
@@ -469,7 +473,7 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 0.224565
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.4604, 0.633772, 38.1252)
 
 [node name="Node3D14" parent="objetos" instance=ExtResource("7_ulwc7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8898, 0.686426, 40.5403)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8898, 0.686426, 43.8094)
 
 [node name="Node3D31" parent="objetos" instance=ExtResource("7_ulwc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5398, 0.686426, 43.7903)
@@ -518,6 +522,10 @@ transform = Transform3D(0.99889, 0, -0.0471065, 0, 1, 0, 0.0471065, 0, 0.99889, 
 [node name="light_ceeling8" parent="luces" instance=ExtResource("14_3c4or")]
 transform = Transform3D(0.99889, 0, -0.0471065, 0, 1, 0, 0.0471065, 0, 0.99889, 10.5005, 2.17106, 48.6628)
 
+[node name="light_ceeling10" parent="luces" instance=ExtResource("14_3c4or")]
+transform = Transform3D(0.99889, 0, -0.0471065, 0, 1, 0, 0.0471065, 0, 0.99889, 10.4975, 2.17106, 40.9116)
+visible = false
+
 [node name="luces_2" parent="luces" instance=ExtResource("15_jqupo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.579, 2.51997, 26.934)
 
@@ -537,7 +545,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.56997, 2.51997, 39.963)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08524, 2.51997, 44.2043)
 
 [node name="AudioTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23326, 0, 21.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1261, 0, 20.3051)
 script = ExtResource("23_nnirs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AudioTrigger"]
@@ -546,11 +554,11 @@ shape = SubResource("BoxShape3D_rvb7b")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AudioTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.6)
-stream = ExtResource("24_tn38t")
+stream = ExtResource("23_2k2dt")
 volume_db = -0.135
 
 [node name="AudioTrigger2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21804, 0, 30.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.49105, 0, 30.75)
 script = ExtResource("23_nnirs")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AudioTrigger2"]
@@ -559,7 +567,7 @@ shape = SubResource("BoxShape3D_rvb7b")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="AudioTrigger2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.6)
-stream = ExtResource("25_rvb7b")
+stream = ExtResource("24_kyp1d")
 volume_db = -0.135
 
 [node name="SM_Keyboard" parent="." instance=ExtResource("23_ouvtg")]
@@ -568,16 +576,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68396, 0.982592, 50.1352)
 [node name="papeles" parent="." instance=ExtResource("24_nnirs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3, 1.20729, 49.45)
 note_title = "Diario Personal"
-note_content = "Prueba"
+note_content = "\"He encontrado evidencia de que alguien más estuvo aquí después de la evacuación oficial. Regreso mañana con cámaras - J. Silva\" (fechada hace 6 meses)"
 paper_sound = ExtResource("25_tn38t")
 
 [node name="clipboard" parent="." instance=ExtResource("26_nuhr1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85, 1.16459, 49.5)
+note_title = "Lista de recepción"
+note_content = ""
 
 [node name="papeles2" parent="." instance=ExtResource("27_qk1ou")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.15, 1.20729, 49.55)
 script = ExtResource("28_wlvwq")
-note_title = "Nota 2"
+note_content = "3er día investigando. Algo no cuadra con las fechas de evacuación 
+
+- M. Torres, Canal 7ta..."
+paper_sound = ExtResource("25_tn38t")
 
 [node name="Node3D" parent="." instance=ExtResource("28_qk1ou")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3.7, 1.26459, 49.5)
@@ -586,7 +599,18 @@ description = "Un poco vieja
 "
 
 [node name="llave" parent="." instance=ExtResource("30_qv6pt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.70396, 0.356379, 52.1861)
+transform = Transform3D(0.5, 0, 0, 0, -0.0224548, 0.499496, 0, -0.499496, -0.0224548, 2.74596, 0.981004, 50.18)
 key_id = "llave_oficina"
 key_name = "Llave de la oficina"
 pickup_sound = ExtResource("31_of555")
+
+[node name="newspaper" parent="." instance=ExtResource("34_bppq5")]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 8.82033, 0.135034, 45.3101)
+note_title = "Periódico"
+note_content = "Hospital San Elías Cerrado Indefinidamente - Cuatro Personas Aún Sin Localizar."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_2k2dt")
+volume_db = -7.496
+autoplay = true
+parameters/looping = true

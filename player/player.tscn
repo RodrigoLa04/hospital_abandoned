@@ -1,13 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7vr7n7ku2xke"]
+[gd_scene load_steps=14 format=3 uid="uid://b7vr7n7ku2xke"]
 
 [ext_resource type="Script" uid="uid://bn05ggds71yju" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="AudioStream" uid="uid://bj05ka45i1at5" path="res://Assets/audios/pasos-steps-40285.mp3" id="2_2ieo8"]
 [ext_resource type="Script" uid="uid://d4aw7lpr063gt" path="res://player/fp_cam.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://bhhbd5sssq17y" path="res://player/interact.gd" id="3_g1dw6"]
+[ext_resource type="AudioStream" uid="uid://bu8krvm1aob6q" path="res://Assets/audios/flashlight-clicking-on-105809.mp3" id="3_hg6s5"]
 [ext_resource type="Script" uid="uid://8x0lopq3waa2" path="res://player/fov.gd" id="3_qjkh3"]
 [ext_resource type="PackedScene" uid="uid://clw44r8x1crc4" path="res://ui/player_ui.tscn" id="4_yw30f"]
 [ext_resource type="Script" uid="uid://px6cfr0p0lgp" path="res://Scripts/interaction_ui.gd" id="6_g6k8r"]
 [ext_resource type="FontFile" uid="uid://qfu4da2wqtsr" path="res://Assets/reactor7/Reactor7.ttf" id="7_boad6"]
-[ext_resource type="Texture2D" uid="uid://5ux0pvhoycvg" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/PaperPile/M_PaperPile.png" id="8_rgyib"]
+[ext_resource type="Texture2D" uid="uid://cosmfpewafx4c" path="res://Assets/e43dc6f02f6c114cb2a0f48d7bf123a8.jpg" id="9_hg6s5"]
+[ext_resource type="Script" uid="uid://cepwbwkt6aqrm" path="res://player/controls_help_ui.gd" id="10_8t03j"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 height = 1.7
@@ -18,6 +21,7 @@ height = 1.6
 [node name="Player" type="CharacterBody3D"]
 floor_max_angle = 1.13446
 script = ExtResource("1_oul6g")
+footstep_sounds = Array[AudioStream]([ExtResource("2_2ieo8")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_kqu6x")
@@ -28,6 +32,8 @@ mesh = SubResource("CapsuleMesh_oul6g")
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59309, -0.027046)
 script = ExtResource("2_rkbax")
+flashlight_on_sound = ExtResource("3_hg6s5")
+flashlight_off_sound = ExtResource("3_hg6s5")
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 script = ExtResource("3_qjkh3")
@@ -48,18 +54,13 @@ spot_angle = 39.55
 
 [node name="InteractionUI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -69.0
-offset_right = 20.0
-offset_bottom = -29.0
 grow_horizontal = 2
-grow_vertical = 0
-size_flags_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("6_g6k8r")
 
 [node name="PromptLabel" type="Label" parent="InteractionUI"]
@@ -69,40 +70,33 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -23.0
-offset_right = 20.0
-offset_bottom = 8.0
+offset_left = -325.0
+offset_top = -31.0
+offset_right = 307.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_boad6")
 horizontal_alignment = 1
 
 [node name="DescriptionPanel" type="Control" parent="InteractionUI"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -35.0
-offset_right = 20.0
-offset_bottom = 35.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DescriptionText" type="RichTextLabel" parent="InteractionUI/DescriptionPanel"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -402.0
-offset_top = -123.0
-offset_right = 402.0
+offset_left = 116.0
+offset_top = 274.0
+offset_right = -132.0
+offset_bottom = -180.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_boad6")
 theme_override_font_sizes/normal_font_size = 25
 horizontal_alignment = 1
@@ -115,9 +109,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -86.0
-offset_top = -23.0
-offset_right = 86.0
+offset_left = -506.0
+offset_top = -166.0
+offset_right = 495.0
+offset_bottom = -143.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("7_boad6")
@@ -128,36 +123,39 @@ vertical_alignment = 1
 
 [node name="NotePanel" type="Control" parent="InteractionUI"]
 layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = -6.354
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = -6.354
-offset_left = -524.0
-offset_top = -285.84
-offset_right = 494.0
-offset_bottom = 294.16
+anchor_bottom = 0.5
+offset_left = -509.0
+offset_top = -290.0
+offset_right = 509.0
+offset_bottom = 290.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="InteractionUI/NotePanel"]
-modulate = Color(1, 1, 1, 0.392157)
+modulate = Color(1, 1, 1, 0.160784)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_rgyib")
+texture = ExtResource("9_hg6s5")
 
 [node name="NoteTitleLabel" type="Label" parent="InteractionUI/NotePanel"]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = -1
 anchor_left = 0.5
+anchor_top = 0.333
 anchor_right = 0.5
-offset_left = -350.0
-offset_top = 40.0
-offset_right = 462.0
-offset_bottom = 63.0
+anchor_bottom = 0.333
+offset_left = -418.0
+offset_top = -114.14
+offset_right = 394.0
+offset_bottom = -26.14
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("7_boad6")
 theme_override_font_sizes/font_size = 25
@@ -170,10 +168,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -488.5
-offset_top = -20.0
-offset_right = 488.5
-offset_bottom = 20.0
+offset_left = -488.0
+offset_top = -40.0
+offset_right = 462.0
+offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("7_boad6")
@@ -182,15 +180,94 @@ horizontal_alignment = 1
 
 [node name="NoteInstructionLabel" type="Label" parent="InteractionUI/NotePanel"]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.878
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -433.0
-offset_top = -72.0
-offset_right = 492.0
-offset_bottom = -49.0
+anchor_bottom = 0.878
+offset_left = -462.0
+offset_top = -0.240021
+offset_right = 463.0
+offset_bottom = 66.76
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_boad6")
 text = "Presiona \"E\" para salir"
+
+[node name="InventoryUI" type="Control" parent="InteractionUI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -101.0
+offset_top = 2.0
+offset_right = -51.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="InventoryPanel" type="Control" parent="InteractionUI/InventoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="VBoxContainer" parent="InteractionUI/InventoryUI/InventoryPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryTitle" type="Label" parent="InteractionUI/InventoryUI/InventoryPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlsHelpUI" type="Control" parent="InteractionUI"]
+modulate = Color(1, 1, 1, 0.4)
+layout_mode = 1
+anchors_preset = 0
+offset_left = 38.0
+offset_right = 432.0
+offset_bottom = 179.0
+script = ExtResource("10_8t03j")
+
+[node name="ControlsList" type="VBoxContainer" parent="InteractionUI/ControlsHelpUI"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 60.0
+offset_right = 361.0
+offset_bottom = 231.0
+
+[node name="Label" type="Label" parent="InteractionUI/ControlsHelpUI/ControlsList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_boad6")
+theme_override_font_sizes/font_size = 25
+text = "WASD -  Moverse
+Mouse - Mover cámara
+F - Linterna
+E - Interactuar"
+
+[node name="ConstrolsTitle" type="Label" parent="InteractionUI/ControlsHelpUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Controles"

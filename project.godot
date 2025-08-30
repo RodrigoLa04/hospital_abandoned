@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hospital_abandoned"
-run/main_scene="uid://dao4fsda5ve0l"
+run/main_scene="uid://bulfvsr5yi2i1"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

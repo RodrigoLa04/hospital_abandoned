@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjcshhr5qhxnm"
+path="res://.godot/imported/Rain Indoor Cabin loop SOUND Effect.mp3-9ee75b212cc4598365984ce4516df354.mp3str"
+
+[deps]
+
+source_file="res://Assets/audios/Rain Indoor Cabin loop SOUND Effect.mp3"
+dest_files=["res://.godot/imported/Rain Indoor Cabin loop SOUND Effect.mp3-9ee75b212cc4598365984ce4516df354.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

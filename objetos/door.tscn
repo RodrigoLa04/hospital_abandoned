@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://osvjdqc8mbbm" path="res://Assets/Abandoned_Hospital - Low Poly Pack/Abandoned_Hospital - Low Poly Pack/Materials/Doors/Double Doors/M_DoubleDoor_DL.png" id="5_ptf7r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0vh73"]
-size = Vector3(1.88574, 2.13327, 0.0828857)
+size = Vector3(0.4, 0.5, 0.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmrxo"]
 resource_name = "M_DoubleDoor_DR"
@@ -180,6 +180,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.467676, -0.106473, -0.00286865)]
+}
 
 [sub_resource type="Animation" id="Animation_y5njw"]
 resource_name = "close"
@@ -206,6 +218,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, -1.5708, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.74),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.532324, -0.106473, 0.597131), Vector3(-0.467676, -0.106473, -0.00286865)]
 }
 
 [sub_resource type="Animation" id="Animation_0phs7"]
@@ -234,6 +258,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.66),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.467676, -0.106473, -0.00286865), Vector3(0.532324, -0.106473, 0.597131)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y5njw"]
 _data = {
@@ -246,8 +282,9 @@ _data = {
 script = ExtResource("1_btyx3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.367676, -0.0564728, -0.00286865)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.467676, -0.106473, -0.00286865)
 shape = SubResource("BoxShape3D_0vh73")
+debug_color = Color(0.0633632, 0.298585, 0.203904, 0.42)
 
 [node name="hingeR2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.543159, 0, 0)
