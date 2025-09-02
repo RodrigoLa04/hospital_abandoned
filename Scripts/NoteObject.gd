@@ -5,6 +5,9 @@ class_name NoteObject
 @export_multiline var note_content: String = "Contenido de la nota..."
 @export var paper_sound: AudioStream
 @export var interaction_key: String = "E"
+@export var triggers_ambient_event: bool = false
+@export var ambient_event_name: String = ""
+@export var ambient_event_position: Vector3 = Vector3.ZERO
 
 signal note_picked_up(note_data)
 
@@ -12,24 +15,16 @@ func _ready():
 	add_to_group("interactable")
 
 func interact():
-	print("Leyendo nota: " + note_title)
 	
-	# Reproducir sonido de papel
-	#if paper_sound:
-		#var audio_player = AudioStreamPlayer3D.new()
-		#add_child(audio_player)
-		#audio_player.stream = paper_sound
-		#audio_player.play()
-		## Eliminar el reproductor después de que termine
-		#audio_player.finished.connect(func(): audio_player.queue_free())
-	
-	# Emitir señal con los datos de la nota
 	var note_data = {
 		"title": note_title,
 		"content": note_content,
 		"key": interaction_key,
 		"type": "note",
-		"sound": paper_sound
+		"sound": paper_sound,  
+		"triggers_event": triggers_ambient_event,
+		"event_name": ambient_event_name,
+		"event_position": ambient_event_position		
 	}
 	note_picked_up.emit(note_data)
 

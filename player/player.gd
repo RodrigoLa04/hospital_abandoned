@@ -13,6 +13,8 @@ var game_paused = false
 @export var footstep_interval: float = 0.6  # Tiempo entre pasos
 @onready var footstep_player = AudioStreamPlayer3D.new()
 
+@onready var ambient_events = get_parent().get_node("AmbienEvents")
+
 var footstep_timer: float = 0.0
 var is_moving = false
 
@@ -160,8 +162,11 @@ func _on_object_interacted(object_data):
 	interaction_ui.show_description(object_data)
 	
 func _on_note_picked_up(note_data):
-	# Mostrar UI de nota
 	interaction_ui.show_note(note_data)
+
+	if note_data.triggers_event and note_data.event_name != "":
+		ambient_events.trigger_event(note_data.event_name, note_data.event_position)
+
 
 # Función temporal para reanudar con ESC
 func _unhandled_input(event):
@@ -180,15 +185,16 @@ func resume_game():
 func _on_door_interacted(door_data):
 	# Manejar diferentes tipos de puertas
 	if door_data.type == 2:  # PERMANENTLY_LOCKED
-		current_interactable.play_locked_sound()  # NUEVA LÍNEA
+		current_interactable.play_locked_sound()
 		interaction_ui.show_message(door_data.permanently_locked_message)
 	elif door_data.type == 1:  # LOCKED
-		# Verificar si el jugador tiene la llave
 		if inventory.has_item(door_data.required_key):
 			interaction_ui.show_message("Usaste: " + door_data.required_key.replace("_", " ").capitalize())
 			current_interactable.toggle_door()
+			# Activar evento ambiental al abrir puerta con llave
+			ambient_events.trigger_event("phone_ring")
 		else:
-			current_interactable.play_locked_sound()  # NUEVA LÍNEA
+			current_interactable.play_locked_sound()
 			interaction_ui.show_message(door_data.locked_message)
 	else:  # UNLOCKED
 		current_interactable.toggle_door()
