@@ -21,6 +21,9 @@ extends Control
 
 
 
+var current_recording: AudioStream
+var recording_player: AudioStreamPlayer
+
 var player: CharacterBody3D
 
 func _ready():
@@ -30,6 +33,7 @@ func _ready():
 	inventory_ui.visible = true 
 	
 	setup_message_system()
+	
 	
 	player = get_parent()
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
@@ -68,6 +72,9 @@ func _input(event):
 			print("=== PRESIONASTE E PARA CERRAR NOTA ===")
 			hide_note()
 # NUEVAS FUNCIONES PARA NOTAS
+
+			
+			
 func show_note(note_data: Dictionary):
 	print("=== MOSTRANDO NOTA ===")
 	print("Datos recibidos: ", note_data)
@@ -161,3 +168,41 @@ func _on_message_timeout():
 	message_label.visible = false
 	
 	
+func show_recorder(recorder_data: Dictionary):
+	print("=== DEBUG GRABADORA ===")
+	print("Datos recibidos: ", recorder_data)
+	
+	# Crear reproductor de audio si no existe
+	if not recording_player:
+		recording_player = AudioStreamPlayer.new()
+		add_child(recording_player)
+		print("Reproductor creado")
+	
+	# Reproducir inmediatamente
+	if recorder_data.recording:
+		print("Voice recording encontrado: ", recorder_data.recording)
+		recording_player.stream = recorder_data.recording
+		recording_player.play()
+		print("Audio reproduciéndose: ", recording_player.playing)
+		show_message("Reproduciendo: " + recorder_data.name, 3.0)
+	else:
+		print("ERROR: No hay voice recording")
+	
+	print("Reproduciendo grabadora: " + recorder_data.name)
+
+
+
+
+
+	
+	# Desconectar señales para evitar duplicados
+
+	
+	## Mostrar crosshair
+	#var crosshair = get_node("../../Player_ui/CanvasLayer/crosshair")
+	#if crosshair:
+		#crosshair.visible = true
+	#
+	## Reanudar juego
+	#if player:
+		#player.resume_game()

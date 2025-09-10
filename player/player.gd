@@ -128,6 +128,8 @@ func interact_with_object():
 		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "KeyObject":
 			needs_pause = false
 			print("Es llave - no pausar")
+		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "VoiceRecorderObject":
+			needs_pause = false
 		else:
 			print("Es otro objeto - sí pausar")
 		
@@ -150,6 +152,9 @@ func interact_with_object():
 		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "KeyObject":
 			if not current_interactable.key_collected.is_connected(_on_key_collected):
 				current_interactable.key_collected.connect(_on_key_collected)
+		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "VoiceRecorderObject":
+			if not current_interactable.recorder_activated.is_connected(_on_recorder_activated):
+				current_interactable.recorder_activated.connect(_on_recorder_activated)
 		else:
 			if not current_interactable.object_interacted.is_connected(_on_object_interacted):
 				current_interactable.object_interacted.connect(_on_object_interacted)
@@ -230,3 +235,11 @@ func play_footstep():
 		print("Audio player playing: ", footstep_player.playing)
 	else:
 		print("No hay sonidos de pasos configurados")
+
+
+func _on_recorder_activated(recorder_data):
+	interaction_ui.show_recorder(recorder_data)
+	
+	# Verificar si esta grabadora activa un evento ambiental
+	if recorder_data.triggers_event and recorder_data.event_name != "":
+		ambient_events.trigger_event(recorder_data.event_name, recorder_data.event_position)
