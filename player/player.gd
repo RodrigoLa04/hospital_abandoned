@@ -1,7 +1,9 @@
 extends CharacterBody3D
 
-const SPEED = 2.0
+const SPEED = 1.5
 const JUMP_VELOCITY = 4.5
+
+signal interact_object
 
 @onready var raycast = $Head/RayCast3D 
 @onready var interaction_ui = $InteractionUI  # Nueva línea
@@ -27,6 +29,8 @@ func _ready():
 		
 	inventory.item_added.connect(_on_item_added_to_inventory)
 	inventory.item_removed.connect(_on_item_removed_from_inventory)
+
+
 	
 
 func _input(event):
@@ -63,7 +67,7 @@ func handle_movement(delta: float) -> void:
 	move_and_slide()
 	
 	var actually_moving = input_dir.length() > 0.1  # Detectar input real
-	print("input_dir: ", input_dir, " actually_moving: ", actually_moving)
+	
 	handle_footsteps(delta, actually_moving and is_on_floor())
 
 
@@ -71,6 +75,7 @@ func handle_movement(delta: float) -> void:
 func check_for_interactables():
 	if raycast.is_colliding():
 		var collider = raycast.get_collider()
+		interact_object.emit(collider)
 		
 		# Verificar si es un objeto interactuable
 		if collider and collider.is_in_group("interactable"):
@@ -92,7 +97,7 @@ func check_for_interactables():
 			# No hay objeto interactuable
 			clear_current_interactable()
 	else:
-		# Raycast no está tocando nada
+		interact_object.emit(null)
 		clear_current_interactable()
 
 func clear_current_interactable():
@@ -141,14 +146,13 @@ func interact_with_object():
 			get_tree().paused = true
 			print("get_tree().paused = ", get_tree().paused)
 		
-		# Conectar señales según el tipo de objeto
+
 		if current_interactable.get_script() and current_interactable.get_script().get_global_name() == "NoteObject":
 			if not current_interactable.note_picked_up.is_connected(_on_note_picked_up):
 				current_interactable.note_picked_up.connect(_on_note_picked_up)
 		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "DoorObject":
 			if not current_interactable.door_interacted.is_connected(_on_door_interacted):
 				current_interactable.door_interacted.connect(_on_door_interacted)
-		# En interact_with_object(), agrega esta condición:
 		elif current_interactable.get_script() and current_interactable.get_script().get_global_name() == "KeyObject":
 			if not current_interactable.key_collected.is_connected(_on_key_collected):
 				current_interactable.key_collected.connect(_on_key_collected)
@@ -159,11 +163,11 @@ func interact_with_object():
 			if not current_interactable.object_interacted.is_connected(_on_object_interacted):
 				current_interactable.object_interacted.connect(_on_object_interacted)
 		
-		# Interactuar
+		
 		current_interactable.interact()
 
 func _on_object_interacted(object_data):
-	# Mostrar UI de descripción
+	
 	interaction_ui.show_description(object_data)
 	
 func _on_note_picked_up(note_data):

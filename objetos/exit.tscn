@@ -77,8 +77,12 @@ albedo_texture = ExtResource("2_x3shi")
 [node name="Node3D" type="Node3D"]
 
 [node name="SM_ExitSign2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2)
 mesh = SubResource("ArrayMesh_1hli3")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_oi84q")
 surface_material_override/1 = SubResource("StandardMaterial3D_ejjuu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+light_color = Color(0, 0.54451, 0.0660793, 1)
+light_energy = 0.05

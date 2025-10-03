@@ -11,10 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2ixp3")
-intro_message = "El 15 de agosto de 1993, el Hospital San Elías fue evacuado debido a que, según las autoridades del edificio, una cepa de tularemia se propagó entre pacientes y personal médico. Todos los médicos y pacientes fueron reubicados a otros hospitales de la zona... menos cuatro.
-
-
-Al día de hoy, siguen desaparecidos."
+message_1 = "- Hey Marc, ayer enviamos a Lisa a investigar detalles al hospital san elías, sin embargo, no contesta mis mensajes y tampoco se presentó hoy a trabajar. estoy seguro que está bien, pero, ¿puedes ir a echarle un ojo? tengo aún mucho papeleo por hacer en la oficina. gracias"
+message_2 = "- Claro, voy para allá."
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

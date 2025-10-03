@@ -6,6 +6,11 @@ class_name VoiceRecorderObject
 @export var voice_recording: AudioStream
 @export var pickup_sound: AudioStream
 @export var interaction_key: String = "E"
+@onready var outlineMesh = $VoiceRecorder/Voice_Recorder2/MeshInstance3D
+
+
+
+@onready var voice_recorder: Node3D = $VoiceRecorder
 
 # Variables para eventos ambientales (como las notas)
 @export var triggers_ambient_event: bool = false
@@ -14,11 +19,37 @@ class_name VoiceRecorderObject
 
 signal recorder_activated(recorder_data)
 
+var selected = false
+var OutlineWidth = 0.002
+
 func _ready():
-	add_to_group("interactable")
+	call_deferred("add_to_group", "interactable")
+	get_tree().get_first_node_in_group("player").interact_object.connect(_set_selected)
+	
+	outlineMesh.visible = false
+	print("VoiceRecorder listo - outlineMesh encontrado: ", outlineMesh != null)
+
+func _process(delta):
+	outlineMesh.visible = selected
+	
+	if selected: 
+		voice_recorder.position.y = OutlineWidth
+		print("Objeto seleccionado - outline debería ser visible")
+	else: 
+		voice_recorder.position.y = 0
+	
+func _set_selected(object):
+	var was_selected = selected
+	selected = self == object
+	if selected != was_selected:
+		print("Estado cambió a: ", selected, " para objeto: ", name)
+
+
+	selected = self == object 
 
 func interact():
 	print("Activando grabadora: " + recorder_name)
+	
 	
 	# Reproducir sonido de pickup si existe
 	if pickup_sound:
@@ -42,9 +73,3 @@ func interact():
 
 func get_interaction_text() -> String:
 	return "Presiona " + interaction_key + " para reproducir " + recorder_name
-
-func highlight():
-	print("Grabadora destacada: " + recorder_name)
-
-func unhighlight():
-	print("Grabadora no destacada: " + recorder_name)

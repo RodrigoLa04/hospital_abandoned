@@ -42,8 +42,8 @@ shadow_mesh = SubResource("ArrayMesh_sr0i5")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d8upo"]
 albedo_texture = ExtResource("1_iviny")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qgmff"]
-points = PackedVector3Array(1.37133, 0.511446, 0.266506, 1.63251, 0.263453, 0.303586, -1.55749, -0.526851, 0.287, 1.63251, -0.552914, -0.359766, -1.37184, 0.511446, 0.266506, 1.63251, 0.263453, -0.410814, 1.55669, -0.526851, 0.287, -1.63331, -0.552914, -0.359766, -1.63331, 0.263453, -0.410814, -1.5307, 0.569714, 0.15044, -1.63331, 0.263453, 0.303586, 1.53022, 0.569714, 0.15044, -1.63331, 0.161476, -0.410814, 1.63251, 0.161476, -0.410814)
+[sub_resource type="BoxShape3D" id="BoxShape3D_iviny"]
+size = Vector3(3.22766, 0.5448, 0.697998)
 
 [node name="Node3D" type="Node3D"]
 
@@ -58,4 +58,5 @@ surface_material_override/0 = SubResource("StandardMaterial3D_d8upo")
 [node name="StaticBody3D" type="StaticBody3D" parent="SM_WaitingChair_Row_4/SM_WaitingChair_Row_4"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SM_WaitingChair_Row_4/SM_WaitingChair_Row_4/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_qgmff")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0142212, -0.2276, -0.0506592)
+shape = SubResource("BoxShape3D_iviny")

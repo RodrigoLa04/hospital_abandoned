@@ -45,10 +45,9 @@ albedo_texture = ExtResource("1_nex6a")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wsgt3"]
 points = PackedVector3Array(0.468908, 0.842413, 0.225, -0.484034, -0.851704, -0.225, -0.468908, -0.824814, 0.225, 0.484034, -0.851704, -0.225, -0.484034, 0.869304, -0.225, 0.484034, 0.869304, -0.225, -0.468908, 0.842413, 0.225, 0.468908, -0.824814, 0.225)
 
-[node name="Node3D" type="Node3D"]
+[node name="estante2" type="Node3D"]
 
 [node name="SM_SingleShelving" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34654, 0, -0.523885)
 
 [node name="SM_SingleShelving" type="MeshInstance3D" parent="SM_SingleShelving"]
 mesh = SubResource("ArrayMesh_yuiv3")
