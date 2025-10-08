@@ -808,7 +808,7 @@ voice_recording = ExtResource("24_kyp1d")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0322887, 0.260747, 30.3774)
 
 [node name="Recorder2" parent="." instance=ExtResource("39_624kj")]
-transform = Transform3D(0.0157597, -0.999876, 0, 0.999876, 0.0157597, 0, 0, 0, 1, -0.320613, 1.01245, 30.6139)
+transform = Transform3D(-6.88878e-10, 4.3706e-08, 1, 0.999876, 0.0157597, 0, -0.0157597, 0.999876, -4.37114e-08, -1.57061, 1.01785, 25.8639)
 voice_recording = ExtResource("43_22kyc")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]

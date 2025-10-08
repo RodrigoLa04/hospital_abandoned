@@ -1,11 +1,11 @@
 extends RayCast3D
 @onready var crosshair = get_parent().get_parent().get_node("Player_ui/CanvasLayer/crosshair")
 
-# Variable para trackear el objeto actual con outline
 var current_highlighted_object = null
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_PAUSABLE
+	
 
 func _physics_process(delta: float) -> void:
 	var new_highlighted_object = null

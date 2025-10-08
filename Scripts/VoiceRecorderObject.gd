@@ -31,12 +31,7 @@ func _ready():
 
 func _process(delta):
 	outlineMesh.visible = selected
-	
-	if selected: 
-		voice_recorder.position.y = OutlineWidth
-		print("Objeto seleccionado - outline debería ser visible")
-	else: 
-		voice_recorder.position.y = 0
+
 	
 func _set_selected(object):
 	var was_selected = selected
